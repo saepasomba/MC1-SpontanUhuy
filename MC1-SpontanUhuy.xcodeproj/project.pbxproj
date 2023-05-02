@@ -7,18 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43694FB529EC64F3007F1C20 /* MC1_SpontanUhuyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB429EC64F3007F1C20 /* MC1_SpontanUhuyApp.swift */; };
+		43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB429EC64F3007F1C20 /* MyApp.swift */; };
 		43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB629EC64F3007F1C20 /* ContentView.swift */; };
 		43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43694FB829EC64F4007F1C20 /* Assets.xcassets */; };
 		43694FBC29EC64F4007F1C20 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43694FBB29EC64F4007F1C20 /* Preview Assets.xcassets */; };
+		D616022929FFE49900C3DFB9 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616022829FFE49900C3DFB9 /* RoomView.swift */; };
+		D616022C29FFF12900C3DFB9 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616022B29FFF12900C3DFB9 /* CustomARView.swift */; };
+		D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */ = {isa = PBXBuildFile; fileRef = D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */; };
+		D61602352A000A1F00C3DFB9 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61602342A000A1F00C3DFB9 /* RoomViewModel.swift */; };
+		D61602372A000FFA00C3DFB9 /* Antique_Furniture.usdz in Resources */ = {isa = PBXBuildFile; fileRef = D61602362A000FFA00C3DFB9 /* Antique_Furniture.usdz */; };
+		D616023A2A00108100C3DFB9 /* FocusNode in Frameworks */ = {isa = PBXBuildFile; productRef = D61602392A00108100C3DFB9 /* FocusNode */; };
+		D616023D2A0010E600C3DFB9 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = D616023C2A0010E600C3DFB9 /* FocusEntity */; };
+		D687D19429F53AF400B38E30 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D687D19329F53AF400B38E30 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		43694FB129EC64F3007F1C20 /* MC1-SpontanUhuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC1-SpontanUhuy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43694FB429EC64F3007F1C20 /* MC1_SpontanUhuyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC1_SpontanUhuyApp.swift; sourceTree = "<group>"; };
+		43694FB429EC64F3007F1C20 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		43694FB629EC64F3007F1C20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43694FB829EC64F4007F1C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43694FBB29EC64F4007F1C20 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D616022829FFE49900C3DFB9 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
+		D616022B29FFF12900C3DFB9 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		D616022D29FFFCEA00C3DFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Indian_Furniture.usdz; sourceTree = "<group>"; };
+		D61602342A000A1F00C3DFB9 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		D61602362A000FFA00C3DFB9 /* Antique_Furniture.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Antique_Furniture.usdz; sourceTree = "<group>"; };
+		D687D19329F53AF400B38E30 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D616023D2A0010E600C3DFB9 /* FocusEntity in Frameworks */,
+				D616023A2A00108100C3DFB9 /* FocusNode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +68,14 @@
 		43694FB329EC64F3007F1C20 /* MC1-SpontanUhuy */ = {
 			isa = PBXGroup;
 			children = (
-				43694FB429EC64F3007F1C20 /* MC1_SpontanUhuyApp.swift */,
-				43694FB629EC64F3007F1C20 /* ContentView.swift */,
+				D61602302A00031500C3DFB9 /* Core */,
+				D616022A29FFF0AD00C3DFB9 /* Components */,
+				D687D19529F53AFA00B38E30 /* Views */,
+				D61602332A000A0A00C3DFB9 /* ViewModels */,
 				43694FB829EC64F4007F1C20 /* Assets.xcassets */,
+				D616022D29FFFCEA00C3DFB9 /* Info.plist */,
 				43694FBA29EC64F4007F1C20 /* Preview Content */,
+				D616022F2A00030B00C3DFB9 /* Resources */,
 			);
 			path = "MC1-SpontanUhuy";
 			sourceTree = "<group>";
@@ -65,6 +86,49 @@
 				43694FBB29EC64F4007F1C20 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D616022A29FFF0AD00C3DFB9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D616022B29FFF12900C3DFB9 /* CustomARView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D616022F2A00030B00C3DFB9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D61602362A000FFA00C3DFB9 /* Antique_Furniture.usdz */,
+				D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D61602302A00031500C3DFB9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				43694FB429EC64F3007F1C20 /* MyApp.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D61602332A000A0A00C3DFB9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D61602342A000A1F00C3DFB9 /* RoomViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D687D19529F53AFA00B38E30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D687D19329F53AF400B38E30 /* SplashScreenView.swift */,
+				43694FB629EC64F3007F1C20 /* ContentView.swift */,
+				D616022829FFE49900C3DFB9 /* RoomView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +147,10 @@
 			dependencies = (
 			);
 			name = "MC1-SpontanUhuy";
+			packageProductDependencies = (
+				D61602392A00108100C3DFB9 /* FocusNode */,
+				D616023C2A0010E600C3DFB9 /* FocusEntity */,
+			);
 			productName = "MC1-SpontanUhuy";
 			productReference = 43694FB129EC64F3007F1C20 /* MC1-SpontanUhuy.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +179,10 @@
 				Base,
 			);
 			mainGroup = 43694FA829EC64F3007F1C20;
+			packageReferences = (
+				D61602382A00108100C3DFB9 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */,
+				D616023B2A0010E600C3DFB9 /* XCRemoteSwiftPackageReference "FocusEntity" */,
+			);
 			productRefGroup = 43694FB229EC64F3007F1C20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +197,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61602372A000FFA00C3DFB9 /* Antique_Furniture.usdz in Resources */,
 				43694FBC29EC64F4007F1C20 /* Preview Assets.xcassets in Resources */,
+				D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */,
 				43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D616022C29FFF12900C3DFB9 /* CustomARView.swift in Sources */,
+				D61602352A000A1F00C3DFB9 /* RoomViewModel.swift in Sources */,
 				43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */,
-				43694FB529EC64F3007F1C20 /* MC1_SpontanUhuyApp.swift in Sources */,
+				D616022929FFE49900C3DFB9 /* RoomView.swift in Sources */,
+				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
+				D687D19429F53AF400B38E30 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,21 +345,29 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-SpontanUhuy/Preview Content\"";
-				DEVELOPMENT_TEAM = G4VYKVQHB6;
+				DEVELOPMENT_TEAM = 47BZXPDJKC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MC1-SpontanUhuy/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Test;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app used camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saepasomba.MC1-SpontanUhuy";
+				PRODUCT_BUNDLE_IDENTIFIER = id.spontan.TemanDekor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,21 +382,29 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-SpontanUhuy/Preview Content\"";
-				DEVELOPMENT_TEAM = G4VYKVQHB6;
+				DEVELOPMENT_TEAM = 47BZXPDJKC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MC1-SpontanUhuy/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Test;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app used camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saepasomba.MC1-SpontanUhuy";
+				PRODUCT_BUNDLE_IDENTIFIER = id.spontan.TemanDekor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +433,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D61602382A00108100C3DFB9 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/ARKit-FocusNode";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		D616023B2A0010E600C3DFB9 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D61602392A00108100C3DFB9 /* FocusNode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D61602382A00108100C3DFB9 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */;
+			productName = FocusNode;
+		};
+		D616023C2A0010E600C3DFB9 /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D616023B2A0010E600C3DFB9 /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43694FA929EC64F3007F1C20 /* Project object */;
 }

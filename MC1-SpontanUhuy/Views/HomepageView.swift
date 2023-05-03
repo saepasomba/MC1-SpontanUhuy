@@ -81,14 +81,14 @@ struct HomepageView: View {
                                     .cornerRadius(15)
                                 
                                 Spacer()
-
+                                
                                 VStack(alignment: .leading) {
                                     Text("Bedroom 1")
                                     Text("Last edited: Saturday, 15:30")
                                         .font(.caption)
                                 }
                                 .foregroundColor(Color(hex: Constants.Color.primaryBlue))
-
+                                
                                 VStack {
                                     Button {
                                         print("Open AR View")
@@ -101,9 +101,9 @@ struct HomepageView: View {
                                                     .fill(Color(hex: Constants.Color.primaryBlue))
                                             }
                                     }
-
+                                    
                                     Spacer()
-
+                                    
                                 }
                             }
                             .padding()

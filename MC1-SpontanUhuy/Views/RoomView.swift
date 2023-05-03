@@ -50,7 +50,7 @@ struct RoomContainer: UIViewRepresentable {
                         for: clonedModel
                     )
                     
-                    let anchor = AnchorEntity(plane: .any)
+                    let anchor = AnchorEntity()
                     anchor.addChild(clonedModel)
                     
                     arView.scene.addAnchor(anchor)

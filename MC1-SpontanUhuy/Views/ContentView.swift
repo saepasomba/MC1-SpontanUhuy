@@ -12,16 +12,12 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            SplashScreenView()
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        self.isFinished = true
-                    }
-                }
+            SplashScreenView(isFinished: $isFinished)
                 .navigationDestination(isPresented: $isFinished, destination: {
-                    Testing()
+                    OnboardpageView()
                         .navigationBarBackButtonHidden()
                 })
+                
 //            RoomView()
         }
     }

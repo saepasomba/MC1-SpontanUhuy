@@ -6,40 +6,62 @@
 //
 
 import SwiftUI
-import UIKit
 import AVKit
 import AVFoundation
-import Foundation
 
-struct VideoPlayerView: View {
-    let onVideoFinished: () -> Void
+struct VideoPlayerView: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        return PlayerUIView(frame: .zero)
+    }
     
-    let avPlayer = AVPlayer(
-        url: Bundle.main.url(forResource: "TemanRuangVideo", withExtension: "mp4")!
-    )
-    
-    var body: some View {
-        AVPlayerControllerRepresented(player: avPlayer)
-            .disabled(true)
-            .onDisappear(){
-                avPlayer.isMuted = false
-            }
-            .onAppear()
+    func updateUIView(_ uiView: UIView, context: Context) {
+        // DO NOTHING !!!
     }
 }
 
-struct AVPlayerControllerRepresented: UIViewControllerRepresentable{
-    var player: AVPlayer
-    
-    func makeUIViewController(context: Context) -> some UIViewController {
-        let view = AVPlayerViewController()
-        view.showsPlaybackControls = false
-        view.player = player
+class PlayerUIView: UIView {
+    private let playerLayer = AVPlayerLayer()
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        // Load The Resource
+        let fileUrl = Bundle.main.url(forResource: "TemanRuangVideo", withExtension: "mp4")!
         
-        return view
+        // Setup The Player
+        let player = AVPlayer(url: fileUrl)
+        playerLayer.player = player
+        playerLayer.videoGravity = .resizeAspectFill
+        layer.addSublayer(playerLayer)
+        
+        // Setup Looping
+//        player.actionAtItemEnd = .none
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(playerItemDidReachEnd(notification:)),
+//                                               name: .AVPlayerItemDidPlayToEndTime,
+//                                               object: player.currentItem)
+
+        // Start the movie
+        player.play()
     }
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
+    @objc
+    func playerItemDidReachEnd(notification: Notification) {
+        playerLayer.player?.seek(to: CMTime.zero)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        playerLayer.frame = bounds
+    }
+}
+
+struct VideoPlayerView_Previews: PreviewProvider {
+    static var previews: some View {
+        VideoPlayerView()
     }
 }

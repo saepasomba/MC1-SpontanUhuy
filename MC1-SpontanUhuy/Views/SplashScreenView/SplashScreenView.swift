@@ -13,38 +13,35 @@ struct SplashScreenView: View {
     @State private var opacity = 0.5
     @State private var goToHome = false
     @State var scale: Double = 0
+    @Binding var isFinished: Bool
     
     var body: some View {
         NavigationView {
             VStack {
                 if isActive {
-                    VideoPlayerView(
-                        onVideoFinished: {
-                            goToHome = true
-                        }
-                    )
+                    VideoPlayerView()
+                    .ignoresSafeArea()
+          
                 } else {
                     ZStack {
+                        Color(hex: Constants.Color.primaryCyan)
+                            .ignoresSafeArea()
                         VStack {
                             Image("TemanRuang")
                                 .resizable()
                                 .scaledToFit()
-                                .ignoresSafeArea()
-                                .background{
-                                    Color(
-                                }
+                          
                         }
                     }.onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             withAnimation {
                                 self.isActive = true
                             }
                         }
                     }
                 }
-                
                 NavigationLink(
-                    destination: Testing()
+                    destination: OnboardpageView()
                         .navigationBarBackButtonHidden()
                         .onAppear {
                             withAnimation(Animation.easeIn(duration: 1)) {
@@ -57,12 +54,17 @@ struct SplashScreenView: View {
                     }
                 )
             }
-        }.navigationViewStyle(StackNavigationViewStyle())
+            .onReceive(NotificationCenter.default.publisher(for: .AVPlayerItemDidPlayToEndTime)) { _ in
+                            isFinished = true
+            }
+            .ignoresSafeArea()
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 struct SplashScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashScreenView()
+        SplashScreenView(isFinished: Binding.constant(false))
     }
 }

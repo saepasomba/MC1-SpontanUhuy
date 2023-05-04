@@ -11,33 +11,38 @@ struct HomepageView: View {
     
     @StateObject var homepageViewModel = HomepageViewModel()
     
-    
     var body: some View {
         ZStack {
             ScrollView {
                 
                 //MARK: Top Bar
-                //TODO: Samain height search field sama like button
-                //TODO: Set warna text semuanya jadi primaryBlue
                 HStack {
                     HStack {
                         Image(systemName: "magnifyingglass")
                         TextField("Search room...", text: $homepageViewModel.searchField)
                     }
+                    .frame(height: 20)
                     .padding()
                     .background {
                         Color(.white)
                             .overlay {
                                 RoundedRectangle(cornerRadius: 5)
-                                    .stroke(lineWidth: 2)
-                                    .fill(Color(hex: Constants.Color.primaryBlue))
+                                    .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 2)
                             }
                     }
                     .cornerRadius(5)
+                    
+                    
                     Button {
                         print("Favourite View")
                     } label: {
                         Image(systemName: "heart")
+                            .overlay {
+                                Circle()
+                                    .scale(2)
+                                    .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                            }
+                            .frame(height: 20)
                             .padding()
                             .overlay {
                                 RoundedRectangle(cornerRadius: 5)
@@ -47,6 +52,7 @@ struct HomepageView: View {
                     }
                     
                 }
+                .foregroundColor(Color(hex: Constants.Color.primaryBlue))
                 .padding(.horizontal)
                 
                 //MARK: Room Ideas Section
@@ -76,14 +82,26 @@ struct HomepageView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
                     VStack {
-                        ForEach(0...5, id: \.self) { _ in
+                        ForEach(0...5, id: \.self) { index in
                             NavigationLink {
                                 RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .editRoom, roomNameField: "Bedroom 1"))
                                     .navigationBarBackButtonHidden()
                             } label: {
                                 HStack {
-                                    Image("DummyRoomPic")
-                                        .cornerRadius(15)
+                                    Group {
+                                        // TODO: Show based on image availability
+                                        if index % 2 == 0 {
+                                            Image("DummyRoomPic")
+                                                .cornerRadius(15)
+                                        } else {
+                                            ZStack {
+                                                Color(.lightGray)
+                                                Text("No Image")
+                                            }
+                                        }
+                                    }
+                                    .frame(width: 150, height: 100)
+                                    .cornerRadius(15)
                                     
                                     
                                     VStack(alignment: .leading, spacing: 10) {

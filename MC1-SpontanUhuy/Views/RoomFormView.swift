@@ -15,7 +15,7 @@ struct RoomFormView: View {
     var body: some View {
         VStack {
             ZStack {
-                Text("New Room")
+                Text("\(roomFormViewModel.viewState == .newRoom ? "New" : "Edit") Room")
                     .fontWeight(.bold)
                 HStack {
                     Button {
@@ -24,6 +24,12 @@ struct RoomFormView: View {
                         Image(systemName: "chevron.left")
                     }
                     Spacer()
+                    
+                    if roomFormViewModel.viewState == .editRoom {
+                        ShareLink(item: URL(string: "https://google.com/")!) {
+                            Image(systemName: "square.and.arrow.up")
+                        }
+                    }
                 }
             }
             .padding(.bottom)
@@ -113,6 +119,17 @@ struct RoomFormView: View {
                         }
                         .cornerRadius(8)
                 }
+                
+                if roomFormViewModel.viewState == .editRoom {
+                    Button {
+                        print("Hello")
+                    } label: {
+                        Text("Delete Room")
+                            .foregroundColor(.red)
+                            .padding(.vertical)
+                    }
+                }
+                
             }
         }
         .padding(.horizontal)

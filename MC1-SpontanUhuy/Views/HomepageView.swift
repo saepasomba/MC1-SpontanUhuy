@@ -77,43 +77,51 @@ struct HomepageView: View {
                         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
                     VStack {
                         ForEach(0...5, id: \.self) { _ in
-                            HStack {
-                                Image("DummyRoomPic")
-                                    .cornerRadius(15)
-                                
-                                Spacer()
-                                
-                                VStack(alignment: .leading) {
-                                    Text("Bedroom 1")
-                                    Text("Last edited: Saturday, 15:30")
-                                        .font(.caption)
-                                }
-                                .foregroundColor(Color(hex: Constants.Color.primaryBlue))
-                                
-                                VStack {
-                                    Button {
-                                        print("Open AR View")
-                                    } label: {
-                                        Image(systemName: "camera.viewfinder")
-                                            .foregroundColor(.white)
-                                            .padding(5)
-                                            .background {
-                                                Circle()
-                                                    .fill(Color(hex: Constants.Color.primaryBlue))
-                                            }
+                            NavigationLink {
+                                RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .editRoom, roomNameField: "Bedroom 1"))
+                                    .navigationBarBackButtonHidden()
+                            } label: {
+                                HStack {
+                                    Image("DummyRoomPic")
+                                        .cornerRadius(15)
+                                    
+                                    
+                                    VStack(alignment: .leading, spacing: 10) {
+                                        Text("Bedroom 1")
+                                            .fontWeight(.bold)
+                                        Text("Last edited: 04/05/2023, 15:30")
+                                            .font(.caption)
                                     }
+                                    .foregroundColor(Color(hex: Constants.Color.primaryBlue))
+                                    .multilineTextAlignment(.leading)
                                     
                                     Spacer()
                                     
+                                    VStack {
+                                        Button {
+                                            print("Open AR View")
+                                        } label: {
+                                            Image(systemName: "camera.viewfinder")
+                                                .foregroundColor(Color(hex: Constants.Color.primaryBlue))
+                                                .padding(5)
+                                                .overlay {
+                                                    Circle()
+                                                        .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                                                }
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                    }
                                 }
-                            }
-                            .padding()
-                            .frame(maxWidth: .infinity, maxHeight: 123)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 15)
-                                    .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                            }
+                                .padding()
+                                .frame(maxWidth: .infinity, maxHeight: 123)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                                }
                             .cornerRadius(15)
+                            }
                         }
                     }
                     .padding(.horizontal)

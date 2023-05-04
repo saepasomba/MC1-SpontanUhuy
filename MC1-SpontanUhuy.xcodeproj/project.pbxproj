@@ -10,7 +10,6 @@
 		325E75DD2A0116F70078FD6C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75DC2A0116F70078FD6C /* SplashScreenView.swift */; };
 		325E75E62A023A590078FD6C /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75E52A023A590078FD6C /* VideoPlayerView.swift */; };
 		325E75ED2A0253FA0078FD6C /* OnboardpageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75EC2A0253FA0078FD6C /* OnboardpageView.swift */; };
-		325E75F02A0254430078FD6C /* OnboardBG.svg in Resources */ = {isa = PBXBuildFile; fileRef = 325E75EF2A0254430078FD6C /* OnboardBG.svg */; };
 		325E75F22A025B070078FD6C /* TemanRuangLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F12A025B070078FD6C /* TemanRuangLogo.png */; };
 		325E75F52A025B4F0078FD6C /* TemanRuangVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F32A025B4F0078FD6C /* TemanRuangVideo.mp4 */; };
 		325E75F62A025B4F0078FD6C /* TemanRuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F42A025B4F0078FD6C /* TemanRuang.png */; };
@@ -41,6 +40,9 @@
 		325E76332A0394130078FD6C /* Sofaset.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76182A0394130078FD6C /* Sofaset.usdz */; };
 		325E76342A0394130078FD6C /* Old_Soviet_Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76192A0394130078FD6C /* Old_Soviet_Chair.usdz */; };
 		325E76352A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E761A2A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz */; };
+		32DF85FA2A03BB8700395FFD /* OnboardBG_Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DF85F82A03BB8700395FFD /* OnboardBG_Portrait.png */; };
+		32DF85FB2A03BB8700395FFD /* OnboardBG_Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DF85F92A03BB8700395FFD /* OnboardBG_Landscape.png */; };
+		32DF85FD2A03BC8500395FFD /* OnboardBG_Iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DF85FC2A03BC8500395FFD /* OnboardBG_Iphone.png */; };
 		43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB429EC64F3007F1C20 /* MyApp.swift */; };
 		43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB629EC64F3007F1C20 /* ContentView.swift */; };
 		43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43694FB829EC64F4007F1C20 /* Assets.xcassets */; };
@@ -63,7 +65,6 @@
 		325E75DC2A0116F70078FD6C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		325E75E52A023A590078FD6C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		325E75EC2A0253FA0078FD6C /* OnboardpageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardpageView.swift; sourceTree = "<group>"; };
-		325E75EF2A0254430078FD6C /* OnboardBG.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = OnboardBG.svg; sourceTree = "<group>"; };
 		325E75F12A025B070078FD6C /* TemanRuangLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemanRuangLogo.png; sourceTree = "<group>"; };
 		325E75F32A025B4F0078FD6C /* TemanRuangVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo.mp4; sourceTree = "<group>"; };
 		325E75F42A025B4F0078FD6C /* TemanRuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemanRuang.png; sourceTree = "<group>"; };
@@ -94,6 +95,9 @@
 		325E76182A0394130078FD6C /* Sofaset.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sofaset.usdz; sourceTree = "<group>"; };
 		325E76192A0394130078FD6C /* Old_Soviet_Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Old_Soviet_Chair.usdz; sourceTree = "<group>"; };
 		325E761A2A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Chair_Model_with_Leather_Material.usdz; sourceTree = "<group>"; };
+		32DF85F82A03BB8700395FFD /* OnboardBG_Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnboardBG_Portrait.png; sourceTree = "<group>"; };
+		32DF85F92A03BB8700395FFD /* OnboardBG_Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnboardBG_Landscape.png; sourceTree = "<group>"; };
+		32DF85FC2A03BC8500395FFD /* OnboardBG_Iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnboardBG_Iphone.png; sourceTree = "<group>"; };
 		43694FB129EC64F3007F1C20 /* MC1-SpontanUhuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC1-SpontanUhuy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43694FB429EC64F3007F1C20 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		43694FB629EC64F3007F1C20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -154,7 +158,9 @@
 		325E75EE2A0254430078FD6C /* Onboard */ = {
 			isa = PBXGroup;
 			children = (
-				325E75EF2A0254430078FD6C /* OnboardBG.svg */,
+				32DF85FC2A03BC8500395FFD /* OnboardBG_Iphone.png */,
+				32DF85F92A03BB8700395FFD /* OnboardBG_Landscape.png */,
+				32DF85F82A03BB8700395FFD /* OnboardBG_Portrait.png */,
 			);
 			path = Onboard;
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				325E76202A0394130078FD6C /* Lace_Curtain.usdz in Resources */,
 				325E75F22A025B070078FD6C /* TemanRuangLogo.png in Resources */,
 				325E76252A0394130078FD6C /* Table_Lamp.usdz in Resources */,
+				32DF85FA2A03BB8700395FFD /* OnboardBG_Portrait.png in Resources */,
 				325E76222A0394130078FD6C /* Freya.usdz in Resources */,
 				325E762A2A0394130078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz in Resources */,
 				325E76282A0394130078FD6C /* Coffee_Table_Low_poly.usdz in Resources */,
@@ -440,13 +447,14 @@
 				325E761C2A0394130078FD6C /* Messy_Bed.usdz in Resources */,
 				325E762C2A0394130078FD6C /* wardrobebro.usdz in Resources */,
 				325E76262A0394130078FD6C /* office_lamp.usdz in Resources */,
+				32DF85FB2A03BB8700395FFD /* OnboardBG_Landscape.png in Resources */,
 				325E76212A0394130078FD6C /* Fluttering_curtain.usdz in Resources */,
 				325E762B2A0394130078FD6C /* Wardrobe.usdz in Resources */,
 				43694FBC29EC64F4007F1C20 /* Preview Assets.xcassets in Resources */,
 				D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */,
 				43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */,
 				325E762D2A0394130078FD6C /* Closet.usdz in Resources */,
-				325E75F02A0254430078FD6C /* OnboardBG.svg in Resources */,
+				32DF85FD2A03BC8500395FFD /* OnboardBG_Iphone.png in Resources */,
 				325E76332A0394130078FD6C /* Sofaset.usdz in Resources */,
 				325E76312A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz in Resources */,
 				325E76292A0394130078FD6C /* Coffee_Table.usdz in Resources */,

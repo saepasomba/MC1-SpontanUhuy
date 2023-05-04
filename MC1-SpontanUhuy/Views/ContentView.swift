@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isEnded = false
+    @State private var isFinished = false
     
     var body: some View {
         NavigationStack {
-            RoomView()
+            SplashScreenView(isFinished: $isFinished)
+                .navigationDestination(isPresented: $isFinished, destination: {
+                    OnboardpageView()
+                        .navigationBarBackButtonHidden()
+                })
+                
+//            RoomView()
         }
     }
 }

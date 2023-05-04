@@ -7,10 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		325E75DD2A0116F70078FD6C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75DC2A0116F70078FD6C /* SplashScreenView.swift */; };
+		325E75E62A023A590078FD6C /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75E52A023A590078FD6C /* VideoPlayerView.swift */; };
+		325E75ED2A0253FA0078FD6C /* OnboardpageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75EC2A0253FA0078FD6C /* OnboardpageView.swift */; };
+		325E75F02A0254430078FD6C /* OnboardBG.svg in Resources */ = {isa = PBXBuildFile; fileRef = 325E75EF2A0254430078FD6C /* OnboardBG.svg */; };
+		325E75F22A025B070078FD6C /* TemanRuangLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F12A025B070078FD6C /* TemanRuangLogo.png */; };
+		325E75F52A025B4F0078FD6C /* TemanRuangVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F32A025B4F0078FD6C /* TemanRuangVideo.mp4 */; };
+		325E75F62A025B4F0078FD6C /* TemanRuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F42A025B4F0078FD6C /* TemanRuang.png */; };
 		43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB429EC64F3007F1C20 /* MyApp.swift */; };
 		43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB629EC64F3007F1C20 /* ContentView.swift */; };
 		43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43694FB829EC64F4007F1C20 /* Assets.xcassets */; };
 		43694FBC29EC64F4007F1C20 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43694FBB29EC64F4007F1C20 /* Preview Assets.xcassets */; };
+		4377120D2A00EEE4000D804B /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4377120C2A00EEE4000D804B /* HomepageViewModel.swift */; };
+		43EB153C2A00F20300C18489 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB153B2A00F20300C18489 /* HomepageView.swift */; };
+		43EB153F2A0100C400C18489 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB153E2A0100C400C18489 /* Color.swift */; };
+		43EB15412A01044200C18489 /* RoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15402A01044200C18489 /* RoomCard.swift */; };
+		43EB15432A01138800C18489 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15422A01138800C18489 /* Constants.swift */; };
 		D616022929FFE49900C3DFB9 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616022829FFE49900C3DFB9 /* RoomView.swift */; };
 		D616022C29FFF12900C3DFB9 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616022B29FFF12900C3DFB9 /* CustomARView.swift */; };
 		D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */ = {isa = PBXBuildFile; fileRef = D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */; };
@@ -27,11 +39,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		325E75DC2A0116F70078FD6C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		325E75E52A023A590078FD6C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		325E75EC2A0253FA0078FD6C /* OnboardpageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardpageView.swift; sourceTree = "<group>"; };
+		325E75EF2A0254430078FD6C /* OnboardBG.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = OnboardBG.svg; sourceTree = "<group>"; };
+		325E75F12A025B070078FD6C /* TemanRuangLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemanRuangLogo.png; sourceTree = "<group>"; };
+		325E75F32A025B4F0078FD6C /* TemanRuangVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo.mp4; sourceTree = "<group>"; };
+		325E75F42A025B4F0078FD6C /* TemanRuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemanRuang.png; sourceTree = "<group>"; };
 		43694FB129EC64F3007F1C20 /* MC1-SpontanUhuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC1-SpontanUhuy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43694FB429EC64F3007F1C20 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		43694FB629EC64F3007F1C20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43694FB829EC64F4007F1C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43694FBB29EC64F4007F1C20 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4377120C2A00EEE4000D804B /* HomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
+		43EB153B2A00F20300C18489 /* HomepageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
+		43EB153E2A0100C400C18489 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		43EB15402A01044200C18489 /* RoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCard.swift; sourceTree = "<group>"; };
+		43EB15422A01138800C18489 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D616022829FFE49900C3DFB9 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		D616022B29FFF12900C3DFB9 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		D616022D29FFFCEA00C3DFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +84,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		325E75D92A00F22B0078FD6C /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				325E75F42A025B4F0078FD6C /* TemanRuang.png */,
+				325E75F32A025B4F0078FD6C /* TemanRuangVideo.mp4 */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		325E75E42A023A3B0078FD6C /* SplashScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				325E75DC2A0116F70078FD6C /* SplashScreenView.swift */,
+				325E75E52A023A590078FD6C /* VideoPlayerView.swift */,
+			);
+			path = SplashScreenView;
+			sourceTree = "<group>";
+		};
+		325E75EB2A0253760078FD6C /* OnboardpageView */ = {
+			isa = PBXGroup;
+			children = (
+				325E75EC2A0253FA0078FD6C /* OnboardpageView.swift */,
+			);
+			path = OnboardpageView;
+			sourceTree = "<group>";
+		};
+		325E75EE2A0254430078FD6C /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				325E75EF2A0254430078FD6C /* OnboardBG.svg */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		325E75F72A025B550078FD6C /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				325E75F12A025B070078FD6C /* TemanRuangLogo.png */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
 		43694FA829EC64F3007F1C20 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +167,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		43EB153D2A01009B00C18489 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43EB153E2A0100C400C18489 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D616022A29FFF0AD00C3DFB9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				D616022B29FFF12900C3DFB9 /* CustomARView.swift */,
 				D6F4091A2A0119B900F45796 /* RoomContainer.swift */,
+				43EB15402A01044200C18489 /* RoomCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -113,6 +188,9 @@
 		D616022F2A00030B00C3DFB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				325E75F72A025B550078FD6C /* Logo */,
+				325E75EE2A0254430078FD6C /* Onboard */,
+				325E75D92A00F22B0078FD6C /* SplashScreen */,
 				D61602362A000FFA00C3DFB9 /* Antique_Furniture.usdz */,
 				D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */,
 			);
@@ -122,8 +200,9 @@
 		D61602302A00031500C3DFB9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D6F4091C2A011D8200F45796 /* Extensions */,
+				43EB153D2A01009B00C18489 /* Extensions */,
 				43694FB429EC64F3007F1C20 /* MyApp.swift */,
+				43EB15422A01138800C18489 /* Constants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -132,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				D61602342A000A1F00C3DFB9 /* RoomViewModel.swift */,
+				4377120C2A00EEE4000D804B /* HomepageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -139,7 +219,9 @@
 		D687D19529F53AFA00B38E30 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D687D19329F53AF400B38E30 /* SplashScreenView.swift */,
+				325E75EB2A0253760078FD6C /* OnboardpageView */,
+				325E75E42A023A3B0078FD6C /* SplashScreenView */,
+				43EB153B2A00F20300C18489 /* HomepageView.swift */,
 				43694FB629EC64F3007F1C20 /* ContentView.swift */,
 				D616022829FFE49900C3DFB9 /* RoomView.swift */,
 			);
@@ -245,10 +327,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325E75F22A025B070078FD6C /* TemanRuangLogo.png in Resources */,
 				D61602372A000FFA00C3DFB9 /* Antique_Furniture.usdz in Resources */,
+				325E75F52A025B4F0078FD6C /* TemanRuangVideo.mp4 in Resources */,
+				325E75F62A025B4F0078FD6C /* TemanRuang.png in Resources */,
 				43694FBC29EC64F4007F1C20 /* Preview Assets.xcassets in Resources */,
 				D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */,
 				43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */,
+				325E75F02A0254430078FD6C /* OnboardBG.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,16 +347,26 @@
 			files = (
 				D6F4090F2A00F09900F45796 /* FurnitureModel.swift in Sources */,
 				D616022C29FFF12900C3DFB9 /* CustomARView.swift in Sources */,
+				43EB15432A01138800C18489 /* Constants.swift in Sources */,
 				D61602352A000A1F00C3DFB9 /* RoomViewModel.swift in Sources */,
 				D6F4091E2A011D8F00F45796 /* Color.swift in Sources */,
 				D623A3A12A026E75001FEDB7 /* FurnitureChosenModel.swift in Sources */,
 				D6CA729C2A033F260094293B /* ModelEntity+Material.swift in Sources */,
 				43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */,
 				D6F4091B2A0119B900F45796 /* RoomContainer.swift in Sources */,
+				325E75DD2A0116F70078FD6C /* SplashScreenView.swift in Sources */,
+				43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */,
+				325E75ED2A0253FA0078FD6C /* OnboardpageView.swift in Sources */,
 				D616022929FFE49900C3DFB9 /* RoomView.swift in Sources */,
+				325E75E62A023A590078FD6C /* VideoPlayerView.swift in Sources */,
 				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
 				D687D19429F53AF400B38E30 /* SplashScreenView.swift in Sources */,
 				D6F409122A01075200F45796 /* FurnitureRepository.swift in Sources */,
+				43EB15412A01044200C18489 /* RoomCard.swift in Sources */,
+				4377120D2A00EEE4000D804B /* HomepageViewModel.swift in Sources */,
+				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
+				43EB153C2A00F20300C18489 /* HomepageView.swift in Sources */,
+				43EB153F2A0100C400C18489 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,11 +496,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-SpontanUhuy/Preview Content\"";
-				DEVELOPMENT_TEAM = 47BZXPDJKC;
+				DEVELOPMENT_TEAM = WMK9L7H7UT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-SpontanUhuy/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Test;
+				INFOPLIST_KEY_CFBundleDisplayName = TemanRuang;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app used camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -438,11 +534,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-SpontanUhuy/Preview Content\"";
-				DEVELOPMENT_TEAM = 47BZXPDJKC;
+				DEVELOPMENT_TEAM = WMK9L7H7UT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-SpontanUhuy/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Test;
+				INFOPLIST_KEY_CFBundleDisplayName = TemanRuang;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app used camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

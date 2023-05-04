@@ -21,7 +21,6 @@ struct SplashScreenView: View {
                 if isActive {
                     VideoPlayerView()
                     .ignoresSafeArea()
-          
                 } else {
                     ZStack {
                         Color(hex: Constants.Color.primaryCyan)
@@ -30,7 +29,6 @@ struct SplashScreenView: View {
                             Image("TemanRuang")
                                 .resizable()
                                 .scaledToFit()
-                          
                         }
                     }.onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

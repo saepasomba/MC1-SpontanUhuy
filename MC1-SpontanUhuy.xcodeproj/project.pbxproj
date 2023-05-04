@@ -14,6 +14,33 @@
 		325E75F22A025B070078FD6C /* TemanRuangLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F12A025B070078FD6C /* TemanRuangLogo.png */; };
 		325E75F52A025B4F0078FD6C /* TemanRuangVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F32A025B4F0078FD6C /* TemanRuangVideo.mp4 */; };
 		325E75F62A025B4F0078FD6C /* TemanRuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F42A025B4F0078FD6C /* TemanRuang.png */; };
+		325E761B2A0394130078FD6C /* Bed.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FA2A0394110078FD6C /* Bed.usdz */; };
+		325E761C2A0394130078FD6C /* Messy_Bed.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FB2A0394110078FD6C /* Messy_Bed.usdz */; };
+		325E761D2A0394130078FD6C /* Bed-2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FC2A0394110078FD6C /* Bed-2.usdz */; };
+		325E761E2A0394130078FD6C /* Bed-3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FD2A0394110078FD6C /* Bed-3.usdz */; };
+		325E761F2A0394130078FD6C /* Curtain_a_prop.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FF2A0394110078FD6C /* Curtain_a_prop.usdz */; };
+		325E76202A0394130078FD6C /* Lace_Curtain.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76002A0394110078FD6C /* Lace_Curtain.usdz */; };
+		325E76212A0394130078FD6C /* Fluttering_curtain.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76012A0394110078FD6C /* Fluttering_curtain.usdz */; };
+		325E76222A0394130078FD6C /* Freya.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76022A0394110078FD6C /* Freya.usdz */; };
+		325E76232A0394130078FD6C /* Table_Lamp_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76042A0394110078FD6C /* Table_Lamp_01.usdz */; };
+		325E76242A0394130078FD6C /* IKEA_desk-lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76052A0394110078FD6C /* IKEA_desk-lamp.usdz */; };
+		325E76252A0394130078FD6C /* Table_Lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76062A0394110078FD6C /* Table_Lamp.usdz */; };
+		325E76262A0394130078FD6C /* office_lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76072A0394110078FD6C /* office_lamp.usdz */; };
+		325E76272A0394130078FD6C /* Flippa_Functional_Coffee_Table_w.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76092A0394110078FD6C /* Flippa_Functional_Coffee_Table_w.usdz */; };
+		325E76282A0394130078FD6C /* Coffee_Table_Low_poly.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760A2A0394110078FD6C /* Coffee_Table_Low_poly.usdz */; };
+		325E76292A0394130078FD6C /* Coffee_Table.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760B2A0394110078FD6C /* Coffee_Table.usdz */; };
+		325E762A2A0394130078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760C2A0394110078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz */; };
+		325E762B2A0394130078FD6C /* Wardrobe.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760E2A0394120078FD6C /* Wardrobe.usdz */; };
+		325E762C2A0394130078FD6C /* wardrobebro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760F2A0394120078FD6C /* wardrobebro.usdz */; };
+		325E762D2A0394130078FD6C /* Closet.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76102A0394120078FD6C /* Closet.usdz */; };
+		325E762E2A0394130078FD6C /* Wardrobe (1).usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76112A0394120078FD6C /* Wardrobe (1).usdz */; };
+		325E762F2A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76132A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz */; };
+		325E76302A0394130078FD6C /* Armchair_Friday_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76142A0394130078FD6C /* Armchair_Friday_1.usdz */; };
+		325E76312A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76162A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz */; };
+		325E76322A0394130078FD6C /* Sofá_Café.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76172A0394130078FD6C /* Sofá_Café.usdz */; };
+		325E76332A0394130078FD6C /* Sofaset.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76182A0394130078FD6C /* Sofaset.usdz */; };
+		325E76342A0394130078FD6C /* Old_Soviet_Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76192A0394130078FD6C /* Old_Soviet_Chair.usdz */; };
+		325E76352A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E761A2A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz */; };
 		43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB429EC64F3007F1C20 /* MyApp.swift */; };
 		43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB629EC64F3007F1C20 /* ContentView.swift */; };
 		43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43694FB829EC64F4007F1C20 /* Assets.xcassets */; };
@@ -40,6 +67,33 @@
 		325E75F12A025B070078FD6C /* TemanRuangLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemanRuangLogo.png; sourceTree = "<group>"; };
 		325E75F32A025B4F0078FD6C /* TemanRuangVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo.mp4; sourceTree = "<group>"; };
 		325E75F42A025B4F0078FD6C /* TemanRuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemanRuang.png; sourceTree = "<group>"; };
+		325E75FA2A0394110078FD6C /* Bed.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bed.usdz; sourceTree = "<group>"; };
+		325E75FB2A0394110078FD6C /* Messy_Bed.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Messy_Bed.usdz; sourceTree = "<group>"; };
+		325E75FC2A0394110078FD6C /* Bed-2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Bed-2.usdz"; sourceTree = "<group>"; };
+		325E75FD2A0394110078FD6C /* Bed-3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Bed-3.usdz"; sourceTree = "<group>"; };
+		325E75FF2A0394110078FD6C /* Curtain_a_prop.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Curtain_a_prop.usdz; sourceTree = "<group>"; };
+		325E76002A0394110078FD6C /* Lace_Curtain.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Lace_Curtain.usdz; sourceTree = "<group>"; };
+		325E76012A0394110078FD6C /* Fluttering_curtain.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Fluttering_curtain.usdz; sourceTree = "<group>"; };
+		325E76022A0394110078FD6C /* Freya.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Freya.usdz; sourceTree = "<group>"; };
+		325E76042A0394110078FD6C /* Table_Lamp_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_Lamp_01.usdz; sourceTree = "<group>"; };
+		325E76052A0394110078FD6C /* IKEA_desk-lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "IKEA_desk-lamp.usdz"; sourceTree = "<group>"; };
+		325E76062A0394110078FD6C /* Table_Lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_Lamp.usdz; sourceTree = "<group>"; };
+		325E76072A0394110078FD6C /* office_lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = office_lamp.usdz; sourceTree = "<group>"; };
+		325E76092A0394110078FD6C /* Flippa_Functional_Coffee_Table_w.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Flippa_Functional_Coffee_Table_w.usdz; sourceTree = "<group>"; };
+		325E760A2A0394110078FD6C /* Coffee_Table_Low_poly.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Coffee_Table_Low_poly.usdz; sourceTree = "<group>"; };
+		325E760B2A0394110078FD6C /* Coffee_Table.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Coffee_Table.usdz; sourceTree = "<group>"; };
+		325E760C2A0394110078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Vintage_Coffee_Table_70s_Freebie.usdz; sourceTree = "<group>"; };
+		325E760E2A0394120078FD6C /* Wardrobe.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Wardrobe.usdz; sourceTree = "<group>"; };
+		325E760F2A0394120078FD6C /* wardrobebro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = wardrobebro.usdz; sourceTree = "<group>"; };
+		325E76102A0394120078FD6C /* Closet.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Closet.usdz; sourceTree = "<group>"; };
+		325E76112A0394120078FD6C /* Wardrobe (1).usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Wardrobe (1).usdz"; sourceTree = "<group>"; };
+		325E76132A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "dlX_-_Armchair_Commodum.usdz"; sourceTree = "<group>"; };
+		325E76142A0394130078FD6C /* Armchair_Friday_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Armchair_Friday_1.usdz; sourceTree = "<group>"; };
+		325E76162A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "2-piece_Sectional_Sofa.usdz"; sourceTree = "<group>"; };
+		325E76172A0394130078FD6C /* Sofá_Café.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Sofá_Café.usdz"; sourceTree = "<group>"; };
+		325E76182A0394130078FD6C /* Sofaset.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sofaset.usdz; sourceTree = "<group>"; };
+		325E76192A0394130078FD6C /* Old_Soviet_Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Old_Soviet_Chair.usdz; sourceTree = "<group>"; };
+		325E761A2A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Chair_Model_with_Leather_Material.usdz; sourceTree = "<group>"; };
 		43694FB129EC64F3007F1C20 /* MC1-SpontanUhuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC1-SpontanUhuy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43694FB429EC64F3007F1C20 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		43694FB629EC64F3007F1C20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +167,96 @@
 			path = Logo;
 			sourceTree = "<group>";
 		};
+		325E75F82A03936C0078FD6C /* Model3D */ = {
+			isa = PBXGroup;
+			children = (
+				325E75F92A0394110078FD6C /* Bed (4) */,
+				325E76122A0394130078FD6C /* Chair (4) */,
+				325E75FE2A0394110078FD6C /* Curtain (4) */,
+				325E76032A0394110078FD6C /* Lamp (4) */,
+				325E76082A0394110078FD6C /* Table (4) */,
+				325E760D2A0394120078FD6C /* Wardrobe (4) */,
+			);
+			path = Model3D;
+			sourceTree = "<group>";
+		};
+		325E75F92A0394110078FD6C /* Bed (4) */ = {
+			isa = PBXGroup;
+			children = (
+				325E75FA2A0394110078FD6C /* Bed.usdz */,
+				325E75FB2A0394110078FD6C /* Messy_Bed.usdz */,
+				325E75FC2A0394110078FD6C /* Bed-2.usdz */,
+				325E75FD2A0394110078FD6C /* Bed-3.usdz */,
+			);
+			path = "Bed (4)";
+			sourceTree = "<group>";
+		};
+		325E75FE2A0394110078FD6C /* Curtain (4) */ = {
+			isa = PBXGroup;
+			children = (
+				325E75FF2A0394110078FD6C /* Curtain_a_prop.usdz */,
+				325E76002A0394110078FD6C /* Lace_Curtain.usdz */,
+				325E76012A0394110078FD6C /* Fluttering_curtain.usdz */,
+				325E76022A0394110078FD6C /* Freya.usdz */,
+			);
+			path = "Curtain (4)";
+			sourceTree = "<group>";
+		};
+		325E76032A0394110078FD6C /* Lamp (4) */ = {
+			isa = PBXGroup;
+			children = (
+				325E76042A0394110078FD6C /* Table_Lamp_01.usdz */,
+				325E76052A0394110078FD6C /* IKEA_desk-lamp.usdz */,
+				325E76062A0394110078FD6C /* Table_Lamp.usdz */,
+				325E76072A0394110078FD6C /* office_lamp.usdz */,
+			);
+			path = "Lamp (4)";
+			sourceTree = "<group>";
+		};
+		325E76082A0394110078FD6C /* Table (4) */ = {
+			isa = PBXGroup;
+			children = (
+				325E76092A0394110078FD6C /* Flippa_Functional_Coffee_Table_w.usdz */,
+				325E760A2A0394110078FD6C /* Coffee_Table_Low_poly.usdz */,
+				325E760B2A0394110078FD6C /* Coffee_Table.usdz */,
+				325E760C2A0394110078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz */,
+			);
+			path = "Table (4)";
+			sourceTree = "<group>";
+		};
+		325E760D2A0394120078FD6C /* Wardrobe (4) */ = {
+			isa = PBXGroup;
+			children = (
+				325E760E2A0394120078FD6C /* Wardrobe.usdz */,
+				325E760F2A0394120078FD6C /* wardrobebro.usdz */,
+				325E76102A0394120078FD6C /* Closet.usdz */,
+				325E76112A0394120078FD6C /* Wardrobe (1).usdz */,
+			);
+			path = "Wardrobe (4)";
+			sourceTree = "<group>";
+		};
+		325E76122A0394130078FD6C /* Chair (4) */ = {
+			isa = PBXGroup;
+			children = (
+				325E76132A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz */,
+				325E76142A0394130078FD6C /* Armchair_Friday_1.usdz */,
+				325E76152A0394130078FD6C /* Sofa */,
+				325E76192A0394130078FD6C /* Old_Soviet_Chair.usdz */,
+				325E761A2A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz */,
+			);
+			path = "Chair (4)";
+			sourceTree = "<group>";
+		};
+		325E76152A0394130078FD6C /* Sofa */ = {
+			isa = PBXGroup;
+			children = (
+				325E76162A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz */,
+				325E76172A0394130078FD6C /* Sofá_Café.usdz */,
+				325E76182A0394130078FD6C /* Sofaset.usdz */,
+			);
+			path = Sofa;
+			sourceTree = "<group>";
+		};
 		43694FA829EC64F3007F1C20 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +316,7 @@
 		D616022F2A00030B00C3DFB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				325E75F82A03936C0078FD6C /* Model3D */,
 				325E75F72A025B550078FD6C /* Logo */,
 				325E75EE2A0254430078FD6C /* Onboard */,
 				325E75D92A00F22B0078FD6C /* SplashScreen */,
@@ -278,14 +423,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325E761B2A0394130078FD6C /* Bed.usdz in Resources */,
+				325E761F2A0394130078FD6C /* Curtain_a_prop.usdz in Resources */,
+				325E761E2A0394130078FD6C /* Bed-3.usdz in Resources */,
+				325E76202A0394130078FD6C /* Lace_Curtain.usdz in Resources */,
 				325E75F22A025B070078FD6C /* TemanRuangLogo.png in Resources */,
+				325E76252A0394130078FD6C /* Table_Lamp.usdz in Resources */,
+				325E76222A0394130078FD6C /* Freya.usdz in Resources */,
+				325E762A2A0394130078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz in Resources */,
+				325E76282A0394130078FD6C /* Coffee_Table_Low_poly.usdz in Resources */,
+				325E761D2A0394130078FD6C /* Bed-2.usdz in Resources */,
 				D61602372A000FFA00C3DFB9 /* Antique_Furniture.usdz in Resources */,
 				325E75F52A025B4F0078FD6C /* TemanRuangVideo.mp4 in Resources */,
 				325E75F62A025B4F0078FD6C /* TemanRuang.png in Resources */,
+				325E76242A0394130078FD6C /* IKEA_desk-lamp.usdz in Resources */,
+				325E761C2A0394130078FD6C /* Messy_Bed.usdz in Resources */,
+				325E762C2A0394130078FD6C /* wardrobebro.usdz in Resources */,
+				325E76262A0394130078FD6C /* office_lamp.usdz in Resources */,
+				325E76212A0394130078FD6C /* Fluttering_curtain.usdz in Resources */,
+				325E762B2A0394130078FD6C /* Wardrobe.usdz in Resources */,
 				43694FBC29EC64F4007F1C20 /* Preview Assets.xcassets in Resources */,
 				D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */,
 				43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */,
+				325E762D2A0394130078FD6C /* Closet.usdz in Resources */,
 				325E75F02A0254430078FD6C /* OnboardBG.svg in Resources */,
+				325E76332A0394130078FD6C /* Sofaset.usdz in Resources */,
+				325E76312A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz in Resources */,
+				325E76292A0394130078FD6C /* Coffee_Table.usdz in Resources */,
+				325E76342A0394130078FD6C /* Old_Soviet_Chair.usdz in Resources */,
+				325E762E2A0394130078FD6C /* Wardrobe (1).usdz in Resources */,
+				325E76232A0394130078FD6C /* Table_Lamp_01.usdz in Resources */,
+				325E76272A0394130078FD6C /* Flippa_Functional_Coffee_Table_w.usdz in Resources */,
+				325E76322A0394130078FD6C /* Sofá_Café.usdz in Resources */,
+				325E76352A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz in Resources */,
+				325E762F2A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz in Resources */,
+				325E76302A0394130078FD6C /* Armchair_Friday_1.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

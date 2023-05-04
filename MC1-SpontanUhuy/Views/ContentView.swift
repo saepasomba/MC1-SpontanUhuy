@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isEnded = false
+    
     var body: some View {
         NavigationStack {
-            // SplashScreenView()
             RoomView()
         }
     }

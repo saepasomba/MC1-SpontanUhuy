@@ -16,9 +16,14 @@
 		D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */ = {isa = PBXBuildFile; fileRef = D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */; };
 		D61602352A000A1F00C3DFB9 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61602342A000A1F00C3DFB9 /* RoomViewModel.swift */; };
 		D61602372A000FFA00C3DFB9 /* Antique_Furniture.usdz in Resources */ = {isa = PBXBuildFile; fileRef = D61602362A000FFA00C3DFB9 /* Antique_Furniture.usdz */; };
-		D616023A2A00108100C3DFB9 /* FocusNode in Frameworks */ = {isa = PBXBuildFile; productRef = D61602392A00108100C3DFB9 /* FocusNode */; };
 		D616023D2A0010E600C3DFB9 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = D616023C2A0010E600C3DFB9 /* FocusEntity */; };
+		D623A3A12A026E75001FEDB7 /* FurnitureChosenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D623A3A02A026E75001FEDB7 /* FurnitureChosenModel.swift */; };
 		D687D19429F53AF400B38E30 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D687D19329F53AF400B38E30 /* SplashScreenView.swift */; };
+		D6CA729C2A033F260094293B /* ModelEntity+Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CA729B2A033F260094293B /* ModelEntity+Material.swift */; };
+		D6F4090F2A00F09900F45796 /* FurnitureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F4090E2A00F09900F45796 /* FurnitureModel.swift */; };
+		D6F409122A01075200F45796 /* FurnitureRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F409112A01075200F45796 /* FurnitureRepository.swift */; };
+		D6F4091B2A0119B900F45796 /* RoomContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F4091A2A0119B900F45796 /* RoomContainer.swift */; };
+		D6F4091E2A011D8F00F45796 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F4091D2A011D8F00F45796 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +38,14 @@
 		D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Indian_Furniture.usdz; sourceTree = "<group>"; };
 		D61602342A000A1F00C3DFB9 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		D61602362A000FFA00C3DFB9 /* Antique_Furniture.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Antique_Furniture.usdz; sourceTree = "<group>"; };
+		D623A3A02A026E75001FEDB7 /* FurnitureChosenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureChosenModel.swift; sourceTree = "<group>"; };
 		D687D19329F53AF400B38E30 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		D6CA729B2A033F260094293B /* ModelEntity+Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity+Material.swift"; sourceTree = "<group>"; };
+		D6F4090E2A00F09900F45796 /* FurnitureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureModel.swift; sourceTree = "<group>"; };
+		D6F409102A00F1E000F45796 /* MC1-SpontanUhuy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MC1-SpontanUhuy.entitlements"; sourceTree = "<group>"; };
+		D6F409112A01075200F45796 /* FurnitureRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureRepository.swift; sourceTree = "<group>"; };
+		D6F4091A2A0119B900F45796 /* RoomContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomContainer.swift; sourceTree = "<group>"; };
+		D6F4091D2A011D8F00F45796 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +54,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D616023D2A0010E600C3DFB9 /* FocusEntity in Frameworks */,
-				D616023A2A00108100C3DFB9 /* FocusNode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,11 +80,13 @@
 			isa = PBXGroup;
 			children = (
 				D61602302A00031500C3DFB9 /* Core */,
+				D6F409152A010F4D00F45796 /* Data */,
 				D616022A29FFF0AD00C3DFB9 /* Components */,
 				D687D19529F53AFA00B38E30 /* Views */,
 				D61602332A000A0A00C3DFB9 /* ViewModels */,
 				43694FB829EC64F4007F1C20 /* Assets.xcassets */,
 				D616022D29FFFCEA00C3DFB9 /* Info.plist */,
+				D6F409102A00F1E000F45796 /* MC1-SpontanUhuy.entitlements */,
 				43694FBA29EC64F4007F1C20 /* Preview Content */,
 				D616022F2A00030B00C3DFB9 /* Resources */,
 			);
@@ -92,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				D616022B29FFF12900C3DFB9 /* CustomARView.swift */,
+				D6F4091A2A0119B900F45796 /* RoomContainer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -108,6 +122,7 @@
 		D61602302A00031500C3DFB9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D6F4091C2A011D8200F45796 /* Extensions */,
 				43694FB429EC64F3007F1C20 /* MyApp.swift */,
 			);
 			path = Core;
@@ -131,6 +146,41 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D6F409152A010F4D00F45796 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D6F409192A01100F00F45796 /* Models */,
+				D6F409182A01100A00F45796 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D6F409182A01100A00F45796 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D6F409112A01075200F45796 /* FurnitureRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		D6F409192A01100F00F45796 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6F4090E2A00F09900F45796 /* FurnitureModel.swift */,
+				D623A3A02A026E75001FEDB7 /* FurnitureChosenModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6F4091C2A011D8200F45796 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D6F4091D2A011D8F00F45796 /* Color.swift */,
+				D6CA729B2A033F260094293B /* ModelEntity+Material.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,7 +198,6 @@
 			);
 			name = "MC1-SpontanUhuy";
 			packageProductDependencies = (
-				D61602392A00108100C3DFB9 /* FocusNode */,
 				D616023C2A0010E600C3DFB9 /* FocusEntity */,
 			);
 			productName = "MC1-SpontanUhuy";
@@ -180,7 +229,6 @@
 			);
 			mainGroup = 43694FA829EC64F3007F1C20;
 			packageReferences = (
-				D61602382A00108100C3DFB9 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */,
 				D616023B2A0010E600C3DFB9 /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
 			productRefGroup = 43694FB229EC64F3007F1C20 /* Products */;
@@ -211,12 +259,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F4090F2A00F09900F45796 /* FurnitureModel.swift in Sources */,
 				D616022C29FFF12900C3DFB9 /* CustomARView.swift in Sources */,
 				D61602352A000A1F00C3DFB9 /* RoomViewModel.swift in Sources */,
+				D6F4091E2A011D8F00F45796 /* Color.swift in Sources */,
+				D623A3A12A026E75001FEDB7 /* FurnitureChosenModel.swift in Sources */,
+				D6CA729C2A033F260094293B /* ModelEntity+Material.swift in Sources */,
 				43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */,
+				D6F4091B2A0119B900F45796 /* RoomContainer.swift in Sources */,
 				D616022929FFE49900C3DFB9 /* RoomView.swift in Sources */,
 				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
 				D687D19429F53AF400B38E30 /* SplashScreenView.swift in Sources */,
+				D6F409122A01075200F45796 /* FurnitureRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MC1-SpontanUhuy/MC1-SpontanUhuy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-SpontanUhuy/Preview Content\"";
@@ -363,7 +418,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = id.spontan.TemanDekor;
+				PRODUCT_BUNDLE_IDENTIFIER = "id.spontan-uhuy.TemanRuang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -379,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MC1-SpontanUhuy/MC1-SpontanUhuy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-SpontanUhuy/Preview Content\"";
@@ -400,7 +456,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = id.spontan.TemanDekor;
+				PRODUCT_BUNDLE_IDENTIFIER = "id.spontan-uhuy.TemanRuang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -435,14 +491,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D61602382A00108100C3DFB9 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maxxfrazer/ARKit-FocusNode";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		D616023B2A0010E600C3DFB9 /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
@@ -454,11 +502,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D61602392A00108100C3DFB9 /* FocusNode */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D61602382A00108100C3DFB9 /* XCRemoteSwiftPackageReference "ARKit-FocusNode" */;
-			productName = FocusNode;
-		};
 		D616023C2A0010E600C3DFB9 /* FocusEntity */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D616023B2A0010E600C3DFB9 /* XCRemoteSwiftPackageReference "FocusEntity" */;

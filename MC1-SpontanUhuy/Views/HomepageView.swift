@@ -18,6 +18,7 @@ struct HomepageView: View {
                 
                 //MARK: Top Bar
                 //TODO: Samain height search field sama like button
+                //TODO: Set warna text semuanya jadi primaryBlue
                 HStack {
                     HStack {
                         Image(systemName: "magnifyingglass")
@@ -126,7 +127,7 @@ struct HomepageView: View {
                 Spacer()
                 
                 NavigationLink {
-                    RoomView()
+                    RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .newRoom))
                         .navigationBarBackButtonHidden()
                 } label: {
                     Text("Add New Room")

@@ -16,6 +16,8 @@
 		43EB153F2A0100C400C18489 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB153E2A0100C400C18489 /* Color.swift */; };
 		43EB15412A01044200C18489 /* RoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15402A01044200C18489 /* RoomCard.swift */; };
 		43EB15432A01138800C18489 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15422A01138800C18489 /* Constants.swift */; };
+		43EB15472A024E4F00C18489 /* RoomFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15462A024E4F00C18489 /* RoomFormView.swift */; };
+		43EB15492A024EA300C18489 /* RoomFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15482A024EA300C18489 /* RoomFormViewModel.swift */; };
 		D616022929FFE49900C3DFB9 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616022829FFE49900C3DFB9 /* RoomView.swift */; };
 		D616022C29FFF12900C3DFB9 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616022B29FFF12900C3DFB9 /* CustomARView.swift */; };
 		D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */ = {isa = PBXBuildFile; fileRef = D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */; };
@@ -37,6 +39,8 @@
 		43EB153E2A0100C400C18489 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		43EB15402A01044200C18489 /* RoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCard.swift; sourceTree = "<group>"; };
 		43EB15422A01138800C18489 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43EB15462A024E4F00C18489 /* RoomFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFormView.swift; sourceTree = "<group>"; };
+		43EB15482A024EA300C18489 /* RoomFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFormViewModel.swift; sourceTree = "<group>"; };
 		D616022829FFE49900C3DFB9 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		D616022B29FFF12900C3DFB9 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		D616022D29FFFCEA00C3DFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			children = (
 				D61602342A000A1F00C3DFB9 /* RoomViewModel.swift */,
 				4377120C2A00EEE4000D804B /* HomepageViewModel.swift */,
+				43EB15482A024EA300C18489 /* RoomFormViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			children = (
 				D687D19329F53AF400B38E30 /* SplashScreenView.swift */,
 				43EB153B2A00F20300C18489 /* HomepageView.swift */,
+				43EB15462A024E4F00C18489 /* RoomFormView.swift */,
 				43694FB629EC64F3007F1C20 /* ContentView.swift */,
 				D616022829FFE49900C3DFB9 /* RoomView.swift */,
 			);
@@ -242,7 +248,9 @@
 				43EB15412A01044200C18489 /* RoomCard.swift in Sources */,
 				4377120D2A00EEE4000D804B /* HomepageViewModel.swift in Sources */,
 				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
+				43EB15492A024EA300C18489 /* RoomFormViewModel.swift in Sources */,
 				43EB153C2A00F20300C18489 /* HomepageView.swift in Sources */,
+				43EB15472A024E4F00C18489 /* RoomFormView.swift in Sources */,
 				D687D19429F53AF400B38E30 /* SplashScreenView.swift in Sources */,
 				43EB153F2A0100C400C18489 /* Color.swift in Sources */,
 			);

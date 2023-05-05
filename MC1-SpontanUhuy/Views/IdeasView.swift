@@ -30,13 +30,16 @@ struct IdeasView: View {
             .font(.title3)
             
             ScrollView(.vertical, showsIndicators: false) {
-                ForEach(0...3, id: \.self) { _ in
+                ForEach(0...4, id: \.self) { _ in
                     VStack {
                         VStack {
                             ZStack {
                                 Image("DummyRoomPic")
                                     .resizable()
+                                    .scaledToFill()
+                                    .frame(height: 143)
                                     .cornerRadius(8)
+                                    .clipped()
                                 
                                 VStack {
                                     HStack {
@@ -60,7 +63,6 @@ struct IdeasView: View {
                                 }
                                 .padding()
                             }
-                            .frame(width: .infinity, height: 143)
                         }
                         .padding(.horizontal)
                         

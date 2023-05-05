@@ -9,9 +9,9 @@ import Foundation
 import CloudKit
 import RealityKit
 
-class FurnitureModel {
+class FurnitureModel: Identifiable {
     static let recordType = "Furniture"
-    private let id: CKRecord.ID
+    let id: CKRecord.ID
     let name: String
     let price: Int64
     let fileName: String

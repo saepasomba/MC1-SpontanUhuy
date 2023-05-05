@@ -9,7 +9,7 @@ import Foundation
 import RealityKit
 import SwiftUI
 
-struct RoomContainer: UIViewRepresentable {
+struct RoomContainerView: UIViewRepresentable {
     @EnvironmentObject var viewModel: RoomViewModel
     
     func makeUIView(context: Context) -> some UIView {
@@ -22,17 +22,17 @@ struct RoomContainer: UIViewRepresentable {
                     let modelEntity = try getModel(fileName: chosenModelToPlace.name)
                     
                     let clonedModel = modelEntity.clone(recursive: true)
-                    clonedModel.name = "\(chosenModelToPlace.name)_\(viewModel.furnitureChosen.count)"
+                    clonedModel.name = "\(chosenModelToPlace.name)_\(viewModel.furnitureAdded.count)"
                     clonedModel.generateCollisionShapes(recursive: true)
                     clonedModel.scale *= 0.1
+                    
+//                    let anchor = AnchorEntity(plane: .any)
+                    let anchor = AnchorEntity()
                     
                     arView.installGestures(
                         [.translation, .scale, .rotation],
                         for: clonedModel
                     )
-                    
-                    let anchor = AnchorEntity(plane: .any)
-                    anchor.name = "Test"
                     anchor.addChild(clonedModel)
                     arView.scene.addAnchor(anchor)
                     
@@ -60,10 +60,10 @@ struct RoomContainer: UIViewRepresentable {
     
     private func handleClickedFurniture(_ entity: Entity) {
         // Reset every model to default material
-        viewModel.furnitureChosen.forEach { $0.model.setAllMaterials(materials: $0.defaultMaterials) }
+        viewModel.furnitureAdded.forEach { $0.model.setAllMaterials(materials: $0.defaultMaterials) }
         
         // Set selected model's material
-        if let chosenFurniture = viewModel.furnitureChosen.first(where: { $0.model.id == entity.id }) {
+        if let chosenFurniture = viewModel.furnitureAdded.first(where: { $0.model.id == entity.id }) {
             chosenFurniture.model.setAllMaterial(material: SimpleMaterial())
             viewModel.selectFurniture(furniture: chosenFurniture)
         }
@@ -74,7 +74,7 @@ struct RoomContainer: UIViewRepresentable {
     }
 }
 
-extension RoomContainer {
+extension RoomContainerView {
     func getModel(fileName: String) throws -> ModelEntity {
         return try ModelEntity.loadModel(
             contentsOf: Bundle.main.url(forResource: fileName, withExtension: "usdz")!

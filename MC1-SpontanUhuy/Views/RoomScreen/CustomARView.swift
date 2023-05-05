@@ -19,7 +19,7 @@ class CustomARView: ARView {
     required init(frame frameRect: CGRect, onEntityClicked: @escaping (Entity) -> Void) {
         super.init(frame: frameRect)
         self.onEntityClicked = onEntityClicked
-        focusEntity = FocusEntity(on: self, style: .classic(color: .blue))
+        focusEntity = FocusEntity(on: self, style: .classic(color: UIColor(Color(hex: 0xFF3A6385))))
         configure()
     }
     
@@ -28,7 +28,7 @@ class CustomARView: ARView {
     }
     
     @MainActor @objc required dynamic init(frame frameRect: CGRect) {
-        fatalError("init(frame:) has not been implemented")
+        fatalError("init(frame) has not been implemented")
     }
     
     private func configure() {

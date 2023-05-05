@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct OnboardpageView: View {
+struct OnboardingView: View {
     var body: some View {
         ZStack {
             Image("OnboardBG")
                 .resizable()
                 .ignoresSafeArea()
+            
             VStack (alignment: .leading) {
                 Spacer()
                 Group {
@@ -31,8 +32,7 @@ struct OnboardpageView: View {
                 )
                 
                 NavigationLink {
-                    HomepageView()
-                        .navigationBarBackButtonHidden()
+                    HomePageView().navigationBarBackButtonHidden()
                 } label: {
                     Text("Get Started")
                         .fontWeight(.bold)
@@ -50,8 +50,8 @@ struct OnboardpageView: View {
     }
 }
 
-struct OnboardpageView_Previews: PreviewProvider {
+struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardpageView()
+        OnboardingView()
     }
 }

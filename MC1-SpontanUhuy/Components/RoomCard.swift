@@ -9,23 +9,33 @@ import SwiftUI
 
 struct RoomCard: View {
     
-    var roomName: String
-    var imageName: String
+    let roomName: String
+    let imageURL: String
+    let onCardClicked: () -> Void
     
     var body: some View {
-        //MARK: Room Idea Card
         Button {
-            print("Open Room Ideas View")
+            onCardClicked()
         } label: {
             ZStack {
-                Image(imageName)
-                    .overlay(content: {
-                        Color(hex: 0xFF424242, alpha: 0.3)
-                    })
-                    .cornerRadius(15)
+                AsyncImage(
+                    url: URL(string: imageURL)!,
+                    content: { image in
+                        image
+                            .overlay {
+                                Color(hex: 0xFF424242, alpha: 0.3)
+                            }
+                    },
+                    placeholder: {
+                        ProgressView()
+                            .progressViewStyle(.circular)
+                    }
+                )
+                
                 Text(roomName)
                     .bold()
                     .foregroundColor(.white)
+                
 //                VStack(alignment: .leading) {
 //                    Text(roomName)
 //                        .bold()
@@ -49,12 +59,18 @@ struct RoomCard: View {
             }
             .frame(height: 100)
         }
-        
+        .cornerRadius(8)
     }
 }
 
 struct RoomCard_Previews: PreviewProvider {
     static var previews: some View {
-        RoomCard(roomName: "Living Room", imageName: "DummyRoomPic")
+        RoomCard(
+            roomName: "Living Room",
+            imageURL: "https://picsum.photos/id/237/200/300",
+            onCardClicked: {
+                
+            }
+        )
     }
 }

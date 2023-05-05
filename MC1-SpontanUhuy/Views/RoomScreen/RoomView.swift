@@ -10,11 +10,11 @@ import RealityKit
 
 struct RoomView: View {
     @EnvironmentObject var viewModel: RoomViewModel
-    @State private var selectedFurniture = ""
+    @State private var selectedFurniture: FurnitureModel? = nil
     
     var body: some View {
         ZStack {
-            RoomContainer()
+            RoomContainerView().ignoresSafeArea()
             RoomSidebar(selectedFurniture: $selectedFurniture)
         }
     }
@@ -23,12 +23,13 @@ struct RoomView: View {
 struct RoomSidebar: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: RoomViewModel
-    @State private var sidebarOpened = false
-    @State private var selectedCategory = ""
-    @State private var currentIndex = 0
-    @Binding private var selectedFurniture: String
     
-    init(selectedFurniture: Binding<String>) {
+    @Binding private var selectedFurniture: FurnitureModel?
+    
+    @State private var sidebarOpened = false
+    @State private var selectedCategory: CategoryModel? = nil
+    
+    init(selectedFurniture: Binding<FurnitureModel?>) {
         self._selectedFurniture = selectedFurniture
     }
     
@@ -36,6 +37,9 @@ struct RoomSidebar: View {
         VStack {
             HStack {
                 Button {
+                    viewModel.furnitureAdded.removeAll()
+                    viewModel.modelToDelete = nil
+                    viewModel.furnitureSelected = nil
                     dismiss()
                 } label: {
                     Image("Icon Back")
@@ -47,7 +51,7 @@ struct RoomSidebar: View {
                 if viewModel.furnitureSelected != nil {
                     Button {
                         viewModel.deleteFurniture()
-                        selectedFurniture = ""
+                        selectedFurniture = nil
                     } label: {
                         Image(systemName: "xmark.circle")
                             .resizable()
@@ -56,9 +60,9 @@ struct RoomSidebar: View {
                             .padding(.horizontal)
                     }
                 }
-                if !selectedFurniture.isEmpty {
+                if selectedFurniture != nil {
                     Button {
-                        viewModel.chosenModelToPlace = viewModel.furnitures.first
+                        viewModel.chosenModelToPlace = selectedFurniture
                     } label: {
                         Image("Image Checklist")
                             .resizable()
@@ -94,35 +98,39 @@ struct RoomSidebar: View {
                             .padding(8)
                             .padding(.vertical, 2)
                             .animation(.easeIn(duration: 0.4), value: sidebarOpened)
-                        
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(Color(hex: 0xFF3A6385))
                     
                     if sidebarOpened {
                         ScrollView {
-                            ForEach(1..<4) { index in
+                            ForEach(viewModel.categories) { category in
                                 VStack {
-                                    Image("Category Chair")
+                                    Image(category.imageURL)
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 24, height: 24)
-                                    Text("Chair")
-                                        .font(.caption)
+                                    Text(category.name)
+                                        .font(.caption2)
                                         .fontWeight(.semibold)
                                         .foregroundColor(Color(hex: 0xFF3A6385))
                                 }
                                 .padding(8)
-                                .padding(.horizontal, 12)
-                                .background(Color(hex: selectedCategory == String(index) ? 0xFF71B4D0 : 0xFFFFFFFF, alpha: 0.65))
+                                .frame(width: 70)
+                                .background(
+                                    Color(
+                                        hex: selectedCategory?.name == category.name ? 0xFF71B4D0 : 0xFFFFFFFF,
+                                        alpha: 0.65
+                                    )
+                                )
                                 .cornerRadius(8)
                                 .onTapGesture {
-                                    if String(index) == selectedCategory {
-                                        selectedCategory = ""
+                                    if category == selectedCategory {
+                                        selectedCategory = nil
                                     } else {
-                                        selectedCategory = String(index)
+                                        selectedCategory = category
                                     }
-                                    selectedFurniture = ""
+                                    selectedFurniture = nil
                                 }
                                 .padding(.top, 4)
                             }
@@ -136,37 +144,39 @@ struct RoomSidebar: View {
             
             Spacer()
             
-            if !selectedCategory.isEmpty {
+            if !(selectedCategory?.name ?? "").isEmpty {
                 HStack(alignment: .center) {
                     Image(systemName: "chevron.left")
                         .foregroundColor(.white)
                     
                     ScrollView(.horizontal) {
                         LazyHStack(alignment: .center) {
-                            ForEach(1..<5) { index in
+                            ForEach((selectedCategory?.furnitures ?? [])) { furniture in
                                 VStack(alignment: .center) {
                                     Image("Category Chair")
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 40, height: 40)
-                                    
-                                    Text("Chair")
-                                        .font(.caption)
+                                    Text(furniture.name)
                                 }
-                                .padding(10)
-                                .padding(.horizontal, 10)
-                                .background(Color(hex: selectedFurniture == String(index) ? 0xFF71B4D0 : 0xFFFFFFFF, alpha: 0.65))
+                                .padding(12)
+                                .background(
+                                    Color(
+                                        hex: selectedFurniture == furniture ? 0xFF71B4D0 : 0xFFFFFFFF,
+                                        alpha: 0.7
+                                    )
+                                )
                                 .cornerRadius(8)
                                 .onTapGesture {
-                                    selectedFurniture = String(index)
+                                      selectedFurniture = furniture
                                 }
-                                .padding(.trailing, index == 4 ? 0 : 8)
+                                .padding(.trailing, furniture == selectedCategory?.furnitures.last ? 0 : 8)
                             }
                         }
-                    }.scrollIndicators(.hidden)
+                    }
+                    .scrollIndicators(.hidden)
                     
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(.white)
+                    Image(systemName: "chevron.right").foregroundColor(.white)
                 }
                 .frame(height: 90)
                 .padding()

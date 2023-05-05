@@ -12,13 +12,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            SplashScreenView(isFinished: $isFinished)
-                .navigationDestination(isPresented: $isFinished, destination: {
-                    OnboardpageView()
-                        .navigationBarBackButtonHidden()
-                })
-                
 //            RoomView()
+            SplashScreenView(isFinished: $isFinished)
+                .navigationDestination(
+                    isPresented: $isFinished,
+                    destination: {
+                        OnboardingView()
+                            .navigationBarBackButtonHidden()
+                    }
+                )
         }
     }
 }

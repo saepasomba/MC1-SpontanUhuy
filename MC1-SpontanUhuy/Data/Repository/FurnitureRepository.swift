@@ -9,6 +9,7 @@ import Foundation
 import CloudKit
 
 class FurnitureRepository {
+    
     let container: CKContainer
     let publicDB: CKDatabase
     let privateDB: CKDatabase
@@ -21,9 +22,41 @@ class FurnitureRepository {
     
     func fetchFurnitures() async throws -> [FurnitureModel] {
         let predicate = NSPredicate(value: true)
-        let query = CKQuery(recordType: "Furniture", predicate: predicate)
+        let query = CKQuery(recordType: FurnitureModel.recordType, predicate: predicate)
         let results = try await publicDB.records(matching: query)
         let records = results.matchResults.compactMap { try? $0.1.get() }
         return records.compactMap(FurnitureModel.init)
+    }
+    
+    func getCategories() async throws -> [CategoryModel] {
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: CategoryModel.recordType, predicate: predicate)
+        let results = try await publicDB.records(matching: query)
+        let records = results.matchResults.compactMap { try? $0.1.get() }
+        
+        var categories = [CategoryModel]()
+        for record in records {
+            if let category = await CategoryModel(record: record) {
+                categories.append(category)
+            }
+        }
+        
+        return categories
+    }
+    
+    func getRecommendations() async throws -> [RecommendationModel] {
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: RecommendationModel.recordType, predicate: predicate)
+        let results = try await publicDB.records(matching: query)
+        let records = results.matchResults.compactMap { try? $0.1.get() }
+        
+        var recommendations = [RecommendationModel]()
+        for record in records {
+            if let recommendation = await RecommendationModel(record: record) {
+                recommendations.append(recommendation)
+            }
+        }
+        
+        return recommendations
     }
 }

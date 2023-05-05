@@ -10,40 +10,40 @@
 		325E75DD2A0116F70078FD6C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75DC2A0116F70078FD6C /* SplashScreenView.swift */; };
 		325E75E62A023A590078FD6C /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75E52A023A590078FD6C /* VideoPlayerView.swift */; };
 		325E75ED2A0253FA0078FD6C /* OnboardpageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75EC2A0253FA0078FD6C /* OnboardpageView.swift */; };
-		325E75F22A025B070078FD6C /* TemanRuangLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 325E75F12A025B070078FD6C /* TemanRuangLogo.png */; };
-		325E761B2A0394130078FD6C /* Bed.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FA2A0394110078FD6C /* Bed.usdz */; };
-		325E761C2A0394130078FD6C /* Messy_Bed.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FB2A0394110078FD6C /* Messy_Bed.usdz */; };
-		325E761D2A0394130078FD6C /* Bed-2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FC2A0394110078FD6C /* Bed-2.usdz */; };
-		325E761E2A0394130078FD6C /* Bed-3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FD2A0394110078FD6C /* Bed-3.usdz */; };
-		325E761F2A0394130078FD6C /* Curtain_a_prop.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FF2A0394110078FD6C /* Curtain_a_prop.usdz */; };
-		325E76202A0394130078FD6C /* Lace_Curtain.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76002A0394110078FD6C /* Lace_Curtain.usdz */; };
-		325E76212A0394130078FD6C /* Fluttering_curtain.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76012A0394110078FD6C /* Fluttering_curtain.usdz */; };
-		325E76222A0394130078FD6C /* Freya.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76022A0394110078FD6C /* Freya.usdz */; };
-		325E76232A0394130078FD6C /* Table_Lamp_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76042A0394110078FD6C /* Table_Lamp_01.usdz */; };
-		325E76242A0394130078FD6C /* IKEA_desk-lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76052A0394110078FD6C /* IKEA_desk-lamp.usdz */; };
-		325E76252A0394130078FD6C /* Table_Lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76062A0394110078FD6C /* Table_Lamp.usdz */; };
-		325E76262A0394130078FD6C /* office_lamp.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76072A0394110078FD6C /* office_lamp.usdz */; };
-		325E76272A0394130078FD6C /* Flippa_Functional_Coffee_Table_w.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76092A0394110078FD6C /* Flippa_Functional_Coffee_Table_w.usdz */; };
-		325E76282A0394130078FD6C /* Coffee_Table_Low_poly.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760A2A0394110078FD6C /* Coffee_Table_Low_poly.usdz */; };
-		325E76292A0394130078FD6C /* Coffee_Table.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760B2A0394110078FD6C /* Coffee_Table.usdz */; };
-		325E762A2A0394130078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760C2A0394110078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz */; };
-		325E762B2A0394130078FD6C /* Wardrobe.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760E2A0394120078FD6C /* Wardrobe.usdz */; };
-		325E762C2A0394130078FD6C /* wardrobebro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760F2A0394120078FD6C /* wardrobebro.usdz */; };
-		325E762D2A0394130078FD6C /* Closet.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76102A0394120078FD6C /* Closet.usdz */; };
-		325E762E2A0394130078FD6C /* Wardrobe (1).usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76112A0394120078FD6C /* Wardrobe (1).usdz */; };
-		325E762F2A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76132A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz */; };
-		325E76302A0394130078FD6C /* Armchair_Friday_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76142A0394130078FD6C /* Armchair_Friday_1.usdz */; };
-		325E76312A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76162A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz */; };
-		325E76322A0394130078FD6C /* Sofá_Café.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76172A0394130078FD6C /* Sofá_Café.usdz */; };
-		325E76332A0394130078FD6C /* Sofaset.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76182A0394130078FD6C /* Sofaset.usdz */; };
-		325E76342A0394130078FD6C /* Old_Soviet_Chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76192A0394130078FD6C /* Old_Soviet_Chair.usdz */; };
-		325E76352A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E761A2A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz */; };
+		325E761F2A0394130078FD6C /* Curtain_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E75FF2A0394110078FD6C /* Curtain_1.usdz */; };
+		325E76202A0394130078FD6C /* Curtain_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76002A0394110078FD6C /* Curtain_2.usdz */; };
+		325E76212A0394130078FD6C /* Curtain_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76012A0394110078FD6C /* Curtain_3.usdz */; };
+		325E76222A0394130078FD6C /* Curtain_4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76022A0394110078FD6C /* Curtain_4.usdz */; };
+		325E76232A0394130078FD6C /* Lamp_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76042A0394110078FD6C /* Lamp_1.usdz */; };
+		325E76242A0394130078FD6C /* Lamp_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76052A0394110078FD6C /* Lamp_2.usdz */; };
+		325E76252A0394130078FD6C /* Lamp_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76062A0394110078FD6C /* Lamp_3.usdz */; };
+		325E76262A0394130078FD6C /* Lamp_4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76072A0394110078FD6C /* Lamp_4.usdz */; };
+		325E76272A0394130078FD6C /* Table_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76092A0394110078FD6C /* Table_1.usdz */; };
+		325E76282A0394130078FD6C /* Table_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760A2A0394110078FD6C /* Table_2.usdz */; };
+		325E76292A0394130078FD6C /* Table_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760B2A0394110078FD6C /* Table_3.usdz */; };
+		325E762A2A0394130078FD6C /* Table_4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760C2A0394110078FD6C /* Table_4.usdz */; };
+		325E762B2A0394130078FD6C /* Wardrobe_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760E2A0394120078FD6C /* Wardrobe_1.usdz */; };
+		325E762C2A0394130078FD6C /* Wardrobe_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E760F2A0394120078FD6C /* Wardrobe_2.usdz */; };
+		325E762D2A0394130078FD6C /* Wardrobe_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76102A0394120078FD6C /* Wardrobe_3.usdz */; };
+		325E762E2A0394130078FD6C /* Wardrobe_4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76112A0394120078FD6C /* Wardrobe_4.usdz */; };
+		325E762F2A0394130078FD6C /* Chair_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76132A0394130078FD6C /* Chair_1.usdz */; };
+		325E76302A0394130078FD6C /* Chair_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76142A0394130078FD6C /* Chair_2.usdz */; };
+		325E76312A0394130078FD6C /* Sofa_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76162A0394130078FD6C /* Sofa_1.usdz */; };
+		325E76322A0394130078FD6C /* Sofa_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76172A0394130078FD6C /* Sofa_2.usdz */; };
+		325E76332A0394130078FD6C /* Sofa_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76182A0394130078FD6C /* Sofa_3.usdz */; };
+		325E76342A0394130078FD6C /* Chair_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E76192A0394130078FD6C /* Chair_3.usdz */; };
+		325E76352A0394130078FD6C /* Chair_4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 325E761A2A0394130078FD6C /* Chair_4.usdz */; };
 		32DF85FA2A03BB8700395FFD /* OnboardBG_Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DF85F82A03BB8700395FFD /* OnboardBG_Portrait.png */; };
 		32DF85FB2A03BB8700395FFD /* OnboardBG_Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DF85F92A03BB8700395FFD /* OnboardBG_Landscape.png */; };
 		32DF85FD2A03BC8500395FFD /* OnboardBG_Iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DF85FC2A03BC8500395FFD /* OnboardBG_Iphone.png */; };
 		32DF86022A04E85400395FFD /* TemanRuangVideo_Portrait.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 32DF85FE2A04E85400395FFD /* TemanRuangVideo_Portrait.mp4 */; };
 		32DF86042A04E85400395FFD /* TemanRuangVideo_Iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 32DF86002A04E85400395FFD /* TemanRuangVideo_Iphone.mp4 */; };
 		32DF86052A04E85400395FFD /* TemanRuangVideo_Landscape.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 32DF86012A04E85400395FFD /* TemanRuangVideo_Landscape.mp4 */; };
+		32DF860C2A04F81C00395FFD /* Bed_1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 32DF86082A04F81C00395FFD /* Bed_1.usdz */; };
+		32DF860D2A04F81C00395FFD /* Bed_2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 32DF86092A04F81C00395FFD /* Bed_2.usdz */; };
+		32DF860E2A04F81C00395FFD /* Bed_3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 32DF860A2A04F81C00395FFD /* Bed_3.usdz */; };
+		32DF860F2A04F81C00395FFD /* Bed_4.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 32DF860B2A04F81C00395FFD /* Bed_4.usdz */; };
+		32DF86122A04FA4A00395FFD /* TemanRuangLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DF86112A04FA4A00395FFD /* TemanRuangLogo.png */; };
 		43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB429EC64F3007F1C20 /* MyApp.swift */; };
 		43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB629EC64F3007F1C20 /* ContentView.swift */; };
 		43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43694FB829EC64F4007F1C20 /* Assets.xcassets */; };
@@ -66,40 +66,40 @@
 		325E75DC2A0116F70078FD6C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		325E75E52A023A590078FD6C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		325E75EC2A0253FA0078FD6C /* OnboardpageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardpageView.swift; sourceTree = "<group>"; };
-		325E75F12A025B070078FD6C /* TemanRuangLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemanRuangLogo.png; sourceTree = "<group>"; };
-		325E75FA2A0394110078FD6C /* Bed.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bed.usdz; sourceTree = "<group>"; };
-		325E75FB2A0394110078FD6C /* Messy_Bed.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Messy_Bed.usdz; sourceTree = "<group>"; };
-		325E75FC2A0394110078FD6C /* Bed-2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Bed-2.usdz"; sourceTree = "<group>"; };
-		325E75FD2A0394110078FD6C /* Bed-3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Bed-3.usdz"; sourceTree = "<group>"; };
-		325E75FF2A0394110078FD6C /* Curtain_a_prop.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Curtain_a_prop.usdz; sourceTree = "<group>"; };
-		325E76002A0394110078FD6C /* Lace_Curtain.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Lace_Curtain.usdz; sourceTree = "<group>"; };
-		325E76012A0394110078FD6C /* Fluttering_curtain.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Fluttering_curtain.usdz; sourceTree = "<group>"; };
-		325E76022A0394110078FD6C /* Freya.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Freya.usdz; sourceTree = "<group>"; };
-		325E76042A0394110078FD6C /* Table_Lamp_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_Lamp_01.usdz; sourceTree = "<group>"; };
-		325E76052A0394110078FD6C /* IKEA_desk-lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "IKEA_desk-lamp.usdz"; sourceTree = "<group>"; };
-		325E76062A0394110078FD6C /* Table_Lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_Lamp.usdz; sourceTree = "<group>"; };
-		325E76072A0394110078FD6C /* office_lamp.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = office_lamp.usdz; sourceTree = "<group>"; };
-		325E76092A0394110078FD6C /* Flippa_Functional_Coffee_Table_w.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Flippa_Functional_Coffee_Table_w.usdz; sourceTree = "<group>"; };
-		325E760A2A0394110078FD6C /* Coffee_Table_Low_poly.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Coffee_Table_Low_poly.usdz; sourceTree = "<group>"; };
-		325E760B2A0394110078FD6C /* Coffee_Table.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Coffee_Table.usdz; sourceTree = "<group>"; };
-		325E760C2A0394110078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Vintage_Coffee_Table_70s_Freebie.usdz; sourceTree = "<group>"; };
-		325E760E2A0394120078FD6C /* Wardrobe.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Wardrobe.usdz; sourceTree = "<group>"; };
-		325E760F2A0394120078FD6C /* wardrobebro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = wardrobebro.usdz; sourceTree = "<group>"; };
-		325E76102A0394120078FD6C /* Closet.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Closet.usdz; sourceTree = "<group>"; };
-		325E76112A0394120078FD6C /* Wardrobe (1).usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Wardrobe (1).usdz"; sourceTree = "<group>"; };
-		325E76132A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "dlX_-_Armchair_Commodum.usdz"; sourceTree = "<group>"; };
-		325E76142A0394130078FD6C /* Armchair_Friday_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Armchair_Friday_1.usdz; sourceTree = "<group>"; };
-		325E76162A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "2-piece_Sectional_Sofa.usdz"; sourceTree = "<group>"; };
-		325E76172A0394130078FD6C /* Sofá_Café.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Sofá_Café.usdz"; sourceTree = "<group>"; };
-		325E76182A0394130078FD6C /* Sofaset.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sofaset.usdz; sourceTree = "<group>"; };
-		325E76192A0394130078FD6C /* Old_Soviet_Chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Old_Soviet_Chair.usdz; sourceTree = "<group>"; };
-		325E761A2A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Chair_Model_with_Leather_Material.usdz; sourceTree = "<group>"; };
+		325E75FF2A0394110078FD6C /* Curtain_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Curtain_1.usdz; sourceTree = "<group>"; };
+		325E76002A0394110078FD6C /* Curtain_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Curtain_2.usdz; sourceTree = "<group>"; };
+		325E76012A0394110078FD6C /* Curtain_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Curtain_3.usdz; sourceTree = "<group>"; };
+		325E76022A0394110078FD6C /* Curtain_4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Curtain_4.usdz; sourceTree = "<group>"; };
+		325E76042A0394110078FD6C /* Lamp_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Lamp_1.usdz; sourceTree = "<group>"; };
+		325E76052A0394110078FD6C /* Lamp_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Lamp_2.usdz; sourceTree = "<group>"; };
+		325E76062A0394110078FD6C /* Lamp_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Lamp_3.usdz; sourceTree = "<group>"; };
+		325E76072A0394110078FD6C /* Lamp_4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Lamp_4.usdz; sourceTree = "<group>"; };
+		325E76092A0394110078FD6C /* Table_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_1.usdz; sourceTree = "<group>"; };
+		325E760A2A0394110078FD6C /* Table_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_2.usdz; sourceTree = "<group>"; };
+		325E760B2A0394110078FD6C /* Table_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_3.usdz; sourceTree = "<group>"; };
+		325E760C2A0394110078FD6C /* Table_4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Table_4.usdz; sourceTree = "<group>"; };
+		325E760E2A0394120078FD6C /* Wardrobe_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Wardrobe_1.usdz; sourceTree = "<group>"; };
+		325E760F2A0394120078FD6C /* Wardrobe_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Wardrobe_2.usdz; sourceTree = "<group>"; };
+		325E76102A0394120078FD6C /* Wardrobe_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Wardrobe_3.usdz; sourceTree = "<group>"; };
+		325E76112A0394120078FD6C /* Wardrobe_4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Wardrobe_4.usdz; sourceTree = "<group>"; };
+		325E76132A0394130078FD6C /* Chair_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Chair_1.usdz; sourceTree = "<group>"; };
+		325E76142A0394130078FD6C /* Chair_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Chair_2.usdz; sourceTree = "<group>"; };
+		325E76162A0394130078FD6C /* Sofa_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sofa_1.usdz; sourceTree = "<group>"; };
+		325E76172A0394130078FD6C /* Sofa_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sofa_2.usdz; sourceTree = "<group>"; };
+		325E76182A0394130078FD6C /* Sofa_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sofa_3.usdz; sourceTree = "<group>"; };
+		325E76192A0394130078FD6C /* Chair_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Chair_3.usdz; sourceTree = "<group>"; };
+		325E761A2A0394130078FD6C /* Chair_4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Chair_4.usdz; sourceTree = "<group>"; };
 		32DF85F82A03BB8700395FFD /* OnboardBG_Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnboardBG_Portrait.png; sourceTree = "<group>"; };
 		32DF85F92A03BB8700395FFD /* OnboardBG_Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnboardBG_Landscape.png; sourceTree = "<group>"; };
 		32DF85FC2A03BC8500395FFD /* OnboardBG_Iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnboardBG_Iphone.png; sourceTree = "<group>"; };
 		32DF85FE2A04E85400395FFD /* TemanRuangVideo_Portrait.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo_Portrait.mp4; sourceTree = "<group>"; };
 		32DF86002A04E85400395FFD /* TemanRuangVideo_Iphone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo_Iphone.mp4; sourceTree = "<group>"; };
 		32DF86012A04E85400395FFD /* TemanRuangVideo_Landscape.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo_Landscape.mp4; sourceTree = "<group>"; };
+		32DF86082A04F81C00395FFD /* Bed_1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bed_1.usdz; sourceTree = "<group>"; };
+		32DF86092A04F81C00395FFD /* Bed_2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bed_2.usdz; sourceTree = "<group>"; };
+		32DF860A2A04F81C00395FFD /* Bed_3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bed_3.usdz; sourceTree = "<group>"; };
+		32DF860B2A04F81C00395FFD /* Bed_4.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Bed_4.usdz; sourceTree = "<group>"; };
+		32DF86112A04FA4A00395FFD /* TemanRuangLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemanRuangLogo.png; sourceTree = "<group>"; };
 		43694FB129EC64F3007F1C20 /* MC1-SpontanUhuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC1-SpontanUhuy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43694FB429EC64F3007F1C20 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		43694FB629EC64F3007F1C20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		325E75F72A025B550078FD6C /* Logo */ = {
 			isa = PBXGroup;
 			children = (
-				325E75F12A025B070078FD6C /* TemanRuangLogo.png */,
+				32DF86112A04FA4A00395FFD /* TemanRuangLogo.png */,
 			);
 			path = Logo;
 			sourceTree = "<group>";
@@ -179,91 +179,91 @@
 		325E75F82A03936C0078FD6C /* Model3D */ = {
 			isa = PBXGroup;
 			children = (
-				325E75F92A0394110078FD6C /* Bed (4) */,
-				325E76122A0394130078FD6C /* Chair (4) */,
-				325E75FE2A0394110078FD6C /* Curtain (4) */,
-				325E76032A0394110078FD6C /* Lamp (4) */,
-				325E76082A0394110078FD6C /* Table (4) */,
-				325E760D2A0394120078FD6C /* Wardrobe (4) */,
+				325E75F92A0394110078FD6C /* Bed */,
+				32DF86102A04F91F00395FFD /* Chair */,
+				325E75FE2A0394110078FD6C /* Curtain */,
+				325E76032A0394110078FD6C /* Lamp */,
+				325E76082A0394110078FD6C /* Table */,
+				325E760D2A0394120078FD6C /* Wardrobe */,
 			);
 			path = Model3D;
 			sourceTree = "<group>";
 		};
-		325E75F92A0394110078FD6C /* Bed (4) */ = {
+		325E75F92A0394110078FD6C /* Bed */ = {
 			isa = PBXGroup;
 			children = (
-				325E75FA2A0394110078FD6C /* Bed.usdz */,
-				325E75FB2A0394110078FD6C /* Messy_Bed.usdz */,
-				325E75FC2A0394110078FD6C /* Bed-2.usdz */,
-				325E75FD2A0394110078FD6C /* Bed-3.usdz */,
+				32DF86082A04F81C00395FFD /* Bed_1.usdz */,
+				32DF86092A04F81C00395FFD /* Bed_2.usdz */,
+				32DF860A2A04F81C00395FFD /* Bed_3.usdz */,
+				32DF860B2A04F81C00395FFD /* Bed_4.usdz */,
 			);
-			path = "Bed (4)";
+			path = Bed;
 			sourceTree = "<group>";
 		};
-		325E75FE2A0394110078FD6C /* Curtain (4) */ = {
+		325E75FE2A0394110078FD6C /* Curtain */ = {
 			isa = PBXGroup;
 			children = (
-				325E75FF2A0394110078FD6C /* Curtain_a_prop.usdz */,
-				325E76002A0394110078FD6C /* Lace_Curtain.usdz */,
-				325E76012A0394110078FD6C /* Fluttering_curtain.usdz */,
-				325E76022A0394110078FD6C /* Freya.usdz */,
+				325E75FF2A0394110078FD6C /* Curtain_1.usdz */,
+				325E76002A0394110078FD6C /* Curtain_2.usdz */,
+				325E76012A0394110078FD6C /* Curtain_3.usdz */,
+				325E76022A0394110078FD6C /* Curtain_4.usdz */,
 			);
-			path = "Curtain (4)";
+			path = Curtain;
 			sourceTree = "<group>";
 		};
-		325E76032A0394110078FD6C /* Lamp (4) */ = {
+		325E76032A0394110078FD6C /* Lamp */ = {
 			isa = PBXGroup;
 			children = (
-				325E76042A0394110078FD6C /* Table_Lamp_01.usdz */,
-				325E76052A0394110078FD6C /* IKEA_desk-lamp.usdz */,
-				325E76062A0394110078FD6C /* Table_Lamp.usdz */,
-				325E76072A0394110078FD6C /* office_lamp.usdz */,
+				325E76042A0394110078FD6C /* Lamp_1.usdz */,
+				325E76052A0394110078FD6C /* Lamp_2.usdz */,
+				325E76062A0394110078FD6C /* Lamp_3.usdz */,
+				325E76072A0394110078FD6C /* Lamp_4.usdz */,
 			);
-			path = "Lamp (4)";
+			path = Lamp;
 			sourceTree = "<group>";
 		};
-		325E76082A0394110078FD6C /* Table (4) */ = {
+		325E76082A0394110078FD6C /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				325E76092A0394110078FD6C /* Flippa_Functional_Coffee_Table_w.usdz */,
-				325E760A2A0394110078FD6C /* Coffee_Table_Low_poly.usdz */,
-				325E760B2A0394110078FD6C /* Coffee_Table.usdz */,
-				325E760C2A0394110078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz */,
+				325E76092A0394110078FD6C /* Table_1.usdz */,
+				325E760A2A0394110078FD6C /* Table_2.usdz */,
+				325E760B2A0394110078FD6C /* Table_3.usdz */,
+				325E760C2A0394110078FD6C /* Table_4.usdz */,
 			);
-			path = "Table (4)";
+			path = Table;
 			sourceTree = "<group>";
 		};
-		325E760D2A0394120078FD6C /* Wardrobe (4) */ = {
+		325E760D2A0394120078FD6C /* Wardrobe */ = {
 			isa = PBXGroup;
 			children = (
-				325E760E2A0394120078FD6C /* Wardrobe.usdz */,
-				325E760F2A0394120078FD6C /* wardrobebro.usdz */,
-				325E76102A0394120078FD6C /* Closet.usdz */,
-				325E76112A0394120078FD6C /* Wardrobe (1).usdz */,
+				325E760E2A0394120078FD6C /* Wardrobe_1.usdz */,
+				325E760F2A0394120078FD6C /* Wardrobe_2.usdz */,
+				325E76102A0394120078FD6C /* Wardrobe_3.usdz */,
+				325E76112A0394120078FD6C /* Wardrobe_4.usdz */,
 			);
-			path = "Wardrobe (4)";
-			sourceTree = "<group>";
-		};
-		325E76122A0394130078FD6C /* Chair (4) */ = {
-			isa = PBXGroup;
-			children = (
-				325E76132A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz */,
-				325E76142A0394130078FD6C /* Armchair_Friday_1.usdz */,
-				325E76152A0394130078FD6C /* Sofa */,
-				325E76192A0394130078FD6C /* Old_Soviet_Chair.usdz */,
-				325E761A2A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz */,
-			);
-			path = "Chair (4)";
+			path = Wardrobe;
 			sourceTree = "<group>";
 		};
 		325E76152A0394130078FD6C /* Sofa */ = {
 			isa = PBXGroup;
 			children = (
-				325E76162A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz */,
-				325E76172A0394130078FD6C /* Sofá_Café.usdz */,
-				325E76182A0394130078FD6C /* Sofaset.usdz */,
+				325E76162A0394130078FD6C /* Sofa_1.usdz */,
+				325E76172A0394130078FD6C /* Sofa_2.usdz */,
+				325E76182A0394130078FD6C /* Sofa_3.usdz */,
 			);
 			path = Sofa;
+			sourceTree = "<group>";
+		};
+		32DF86102A04F91F00395FFD /* Chair */ = {
+			isa = PBXGroup;
+			children = (
+				325E76132A0394130078FD6C /* Chair_1.usdz */,
+				325E76142A0394130078FD6C /* Chair_2.usdz */,
+				325E76192A0394130078FD6C /* Chair_3.usdz */,
+				325E761A2A0394130078FD6C /* Chair_4.usdz */,
+				325E76152A0394130078FD6C /* Sofa */,
+			);
+			path = Chair;
 			sourceTree = "<group>";
 		};
 		43694FA829EC64F3007F1C20 = {
@@ -432,44 +432,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				325E761B2A0394130078FD6C /* Bed.usdz in Resources */,
-				325E761F2A0394130078FD6C /* Curtain_a_prop.usdz in Resources */,
-				325E761E2A0394130078FD6C /* Bed-3.usdz in Resources */,
-				325E76202A0394130078FD6C /* Lace_Curtain.usdz in Resources */,
-				325E75F22A025B070078FD6C /* TemanRuangLogo.png in Resources */,
-				325E76252A0394130078FD6C /* Table_Lamp.usdz in Resources */,
+				325E761F2A0394130078FD6C /* Curtain_1.usdz in Resources */,
+				32DF860D2A04F81C00395FFD /* Bed_2.usdz in Resources */,
+				325E76202A0394130078FD6C /* Curtain_2.usdz in Resources */,
+				325E76252A0394130078FD6C /* Lamp_3.usdz in Resources */,
 				32DF85FA2A03BB8700395FFD /* OnboardBG_Portrait.png in Resources */,
-				325E76222A0394130078FD6C /* Freya.usdz in Resources */,
-				325E762A2A0394130078FD6C /* Vintage_Coffee_Table_70s_Freebie.usdz in Resources */,
+				325E76222A0394130078FD6C /* Curtain_4.usdz in Resources */,
+				325E762A2A0394130078FD6C /* Table_4.usdz in Resources */,
+				32DF860F2A04F81C00395FFD /* Bed_4.usdz in Resources */,
 				32DF86022A04E85400395FFD /* TemanRuangVideo_Portrait.mp4 in Resources */,
-				325E76282A0394130078FD6C /* Coffee_Table_Low_poly.usdz in Resources */,
-				325E761D2A0394130078FD6C /* Bed-2.usdz in Resources */,
+				325E76282A0394130078FD6C /* Table_2.usdz in Resources */,
 				D61602372A000FFA00C3DFB9 /* Antique_Furniture.usdz in Resources */,
-				325E76242A0394130078FD6C /* IKEA_desk-lamp.usdz in Resources */,
-				325E761C2A0394130078FD6C /* Messy_Bed.usdz in Resources */,
-				325E762C2A0394130078FD6C /* wardrobebro.usdz in Resources */,
-				325E76262A0394130078FD6C /* office_lamp.usdz in Resources */,
+				325E76242A0394130078FD6C /* Lamp_2.usdz in Resources */,
+				325E762C2A0394130078FD6C /* Wardrobe_2.usdz in Resources */,
+				325E76262A0394130078FD6C /* Lamp_4.usdz in Resources */,
+				32DF860C2A04F81C00395FFD /* Bed_1.usdz in Resources */,
 				32DF85FB2A03BB8700395FFD /* OnboardBG_Landscape.png in Resources */,
-				325E76212A0394130078FD6C /* Fluttering_curtain.usdz in Resources */,
-				325E762B2A0394130078FD6C /* Wardrobe.usdz in Resources */,
+				325E76212A0394130078FD6C /* Curtain_3.usdz in Resources */,
+				325E762B2A0394130078FD6C /* Wardrobe_1.usdz in Resources */,
 				43694FBC29EC64F4007F1C20 /* Preview Assets.xcassets in Resources */,
 				D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */,
 				43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */,
-				325E762D2A0394130078FD6C /* Closet.usdz in Resources */,
+				325E762D2A0394130078FD6C /* Wardrobe_3.usdz in Resources */,
 				32DF85FD2A03BC8500395FFD /* OnboardBG_Iphone.png in Resources */,
-				325E76332A0394130078FD6C /* Sofaset.usdz in Resources */,
-				325E76312A0394130078FD6C /* 2-piece_Sectional_Sofa.usdz in Resources */,
-				325E76292A0394130078FD6C /* Coffee_Table.usdz in Resources */,
-				325E76342A0394130078FD6C /* Old_Soviet_Chair.usdz in Resources */,
+				325E76332A0394130078FD6C /* Sofa_3.usdz in Resources */,
+				325E76312A0394130078FD6C /* Sofa_1.usdz in Resources */,
+				325E76292A0394130078FD6C /* Table_3.usdz in Resources */,
+				325E76342A0394130078FD6C /* Chair_3.usdz in Resources */,
 				32DF86052A04E85400395FFD /* TemanRuangVideo_Landscape.mp4 in Resources */,
 				32DF86042A04E85400395FFD /* TemanRuangVideo_Iphone.mp4 in Resources */,
-				325E762E2A0394130078FD6C /* Wardrobe (1).usdz in Resources */,
-				325E76232A0394130078FD6C /* Table_Lamp_01.usdz in Resources */,
-				325E76272A0394130078FD6C /* Flippa_Functional_Coffee_Table_w.usdz in Resources */,
-				325E76322A0394130078FD6C /* Sofá_Café.usdz in Resources */,
-				325E76352A0394130078FD6C /* Chair_Model_with_Leather_Material.usdz in Resources */,
-				325E762F2A0394130078FD6C /* dlX_-_Armchair_Commodum.usdz in Resources */,
-				325E76302A0394130078FD6C /* Armchair_Friday_1.usdz in Resources */,
+				325E762E2A0394130078FD6C /* Wardrobe_4.usdz in Resources */,
+				325E76232A0394130078FD6C /* Lamp_1.usdz in Resources */,
+				325E76272A0394130078FD6C /* Table_1.usdz in Resources */,
+				32DF860E2A04F81C00395FFD /* Bed_3.usdz in Resources */,
+				325E76322A0394130078FD6C /* Sofa_2.usdz in Resources */,
+				325E76352A0394130078FD6C /* Chair_4.usdz in Resources */,
+				325E762F2A0394130078FD6C /* Chair_1.usdz in Resources */,
+				325E76302A0394130078FD6C /* Chair_2.usdz in Resources */,
+				32DF86122A04FA4A00395FFD /* TemanRuangLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

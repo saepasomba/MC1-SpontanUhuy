@@ -11,6 +11,7 @@ import SwiftUI
 class HomePageViewModel: ObservableObject {
     @Published var searchField: String = ""
     @Published var recommendations: [RecommendationModel] = []
+    @Published var rooms: [RoomModel] = []
     @Published var message = ""
     @Published var isLoading = false
     
@@ -20,12 +21,14 @@ class HomePageViewModel: ObservableObject {
         DispatchQueue.main.async {
             self.isLoading = true
         }
+        
         do {
             let results = try await repository.getRecommendations()
+            let rooms = try await repository.getRooms()
             DispatchQueue.main.async {
                 self.isLoading = false
-                print("Result are \(results)")
                 self.recommendations = results
+                self.rooms = rooms
             }
         } catch {
             DispatchQueue.main.async {

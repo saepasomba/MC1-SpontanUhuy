@@ -31,7 +31,8 @@ struct HomePageView: View {
                             .foregroundColor(Color(hex: Constants.Color.primaryBlue))
                         
                         if homePageViewModel.isLoading {
-                            ProgressView().progressViewStyle(.circular)
+                            ProgressView()
+                                .progressViewStyle(.circular)
                         } else {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 LazyHStack {
@@ -60,65 +61,10 @@ struct HomePageView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
                     VStack {
-                        ForEach(0...5, id: \.self) { index in
-                            NavigationLink {
-                                RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .editRoom, roomNameField: "Bedroom 1"))
-                                    .navigationBarBackButtonHidden()
-                            } label: {
-                                HStack {
-                                    Group {
-                                        // TODO: Show based on image availability
-                                        if index % 2 == 0 {
-                                            Image("DummyRoomPic")
-                                                .cornerRadius(15)
-                                        } else {
-                                            ZStack {
-                                                Color(.lightGray)
-                                                Text("No Image")
-                                                    .foregroundColor(.gray)
-                                            }
-                                        }
-                                    }
-                                    .frame(width: 150, height: 100)
-                                    .cornerRadius(15)
-                                    
-                                    
-                                    VStack(alignment: .leading, spacing: 10) {
-                                        Text("Bedroom 1")
-                                            .fontWeight(.bold)
-                                        Text("Last edited: 04/05/2023, 15:30")
-                                            .font(.caption)
-                                    }
-                                    .foregroundColor(Color(hex: Constants.Color.primaryBlue))
-                                    .multilineTextAlignment(.leading)
-                                    
-                                    Spacer()
-                                    
-                                    VStack {
-                                        Button {
-                                            print("Open AR View")
-                                        } label: {
-                                            Image(systemName: "camera.viewfinder")
-                                                .foregroundColor(Color(hex: Constants.Color.primaryBlue))
-                                                .padding(5)
-                                                .overlay {
-                                                    Circle()
-                                                        .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                                                }
-                                        }
-                                        
-                                        Spacer()
-                                        
-                                    }
-                                }
-                                .padding()
-                                .frame(maxWidth: .infinity, maxHeight: 123)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                                }
-                            .cornerRadius(15)
-                            }
+                        if homePageViewModel.isLoading {
+                            ProgressView().progressViewStyle(.circular)
+                        } else {
+                            RoomList(rooms: $homePageViewModel.rooms)
                         }
                     }
                     .padding(.horizontal)

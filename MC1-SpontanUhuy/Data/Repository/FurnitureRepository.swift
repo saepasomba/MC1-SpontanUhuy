@@ -59,4 +59,20 @@ class FurnitureRepository {
         
         return recommendations
     }
+    
+    func getRooms() async throws -> [RoomModel] {
+        let predicate = NSPredicate(value: true)
+        let query = CKQuery(recordType: RoomModel.recordType, predicate: predicate)
+        let results = try await privateDB.records(matching: query)
+        let records = results.matchResults.compactMap { try? $0.1.get() }
+        
+        var rooms = [RoomModel]()
+        for record in records {
+            if let room = await RoomModel(record: record) {
+                rooms.append(room)
+            }
+        }
+        
+        return rooms
+    }
 }

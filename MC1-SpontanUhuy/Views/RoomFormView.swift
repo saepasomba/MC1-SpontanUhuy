@@ -28,6 +28,9 @@ struct RoomFormView: View {
                     if roomFormViewModel.viewState == .editRoom {
                         ShareLink(item: URL(string: "https://google.com/")!) {
                             Image(systemName: "square.and.arrow.up")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
                         }
                     }
                 }

@@ -60,6 +60,9 @@
 		D66127FB2A0505B500A9167F /* TemanRuangVideo_Iphone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D66127F82A0505B500A9167F /* TemanRuangVideo_Iphone.mp4 */; };
 		D66127FC2A0505B500A9167F /* TemanRuangVideo_Landscape.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D66127F92A0505B500A9167F /* TemanRuangVideo_Landscape.mp4 */; };
 		D66127FD2A0505B500A9167F /* TemanRuangVideo_Portrait.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D66127FA2A0505B500A9167F /* TemanRuangVideo_Portrait.mp4 */; };
+		D66127FF2A0508CB00A9167F /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66127FE2A0508CB00A9167F /* RoomModel.swift */; };
+		D66128012A050AAD00A9167F /* FurnitureHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66128002A050AAD00A9167F /* FurnitureHistoryModel.swift */; };
+		D66128032A05137200A9167F /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66128022A05137200A9167F /* RoomList.swift */; };
 		D67C83C52A04E115004AA520 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C83C42A04E115004AA520 /* ContentView.swift */; };
 		D67C83C72A04E141004AA520 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C83C62A04E141004AA520 /* HomePageView.swift */; };
 		D67C83C92A04E535004AA520 /* FurnitureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C83C82A04E535004AA520 /* FurnitureCard.swift */; };
@@ -125,6 +128,9 @@
 		D66127F82A0505B500A9167F /* TemanRuangVideo_Iphone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo_Iphone.mp4; sourceTree = "<group>"; };
 		D66127F92A0505B500A9167F /* TemanRuangVideo_Landscape.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo_Landscape.mp4; sourceTree = "<group>"; };
 		D66127FA2A0505B500A9167F /* TemanRuangVideo_Portrait.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo_Portrait.mp4; sourceTree = "<group>"; };
+		D66127FE2A0508CB00A9167F /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
+		D66128002A050AAD00A9167F /* FurnitureHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureHistoryModel.swift; sourceTree = "<group>"; };
+		D66128022A05137200A9167F /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
 		D67C83C42A04E115004AA520 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D67C83C62A04E141004AA520 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		D67C83C82A04E535004AA520 /* FurnitureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureCard.swift; sourceTree = "<group>"; };
@@ -305,6 +311,7 @@
 				43EB15402A01044200C18489 /* RoomCard.swift */,
 				D67C83C82A04E535004AA520 /* FurnitureCard.swift */,
 				D67C83CA2A04EB1F004AA520 /* FurnitureList.swift */,
+				D66128022A05137200A9167F /* RoomList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -415,6 +422,8 @@
 				D623A3A02A026E75001FEDB7 /* FurnitureChosenModel.swift */,
 				D62B1C362A03B29400C314AB /* CategoryModel.swift */,
 				D6D869152A04A71400AC699A /* RecommendationModel.swift */,
+				D66127FE2A0508CB00A9167F /* RoomModel.swift */,
+				D66128002A050AAD00A9167F /* FurnitureHistoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -537,7 +546,9 @@
 				D62B1C372A03B29400C314AB /* CategoryModel.swift in Sources */,
 				D623A3A12A026E75001FEDB7 /* FurnitureChosenModel.swift in Sources */,
 				D67C83C72A04E141004AA520 /* HomePageView.swift in Sources */,
+				D66128032A05137200A9167F /* RoomList.swift in Sources */,
 				D6F4091B2A0119B900F45796 /* RoomContainerView.swift in Sources */,
+				D66128012A050AAD00A9167F /* FurnitureHistoryModel.swift in Sources */,
 				325E75DD2A0116F70078FD6C /* SplashScreenView.swift in Sources */,
 				D616022929FFE49900C3DFB9 /* RoomView.swift in Sources */,
 				325E75E62A023A590078FD6C /* VideoPlayerView.swift in Sources */,
@@ -549,6 +560,7 @@
 				4377120D2A00EEE4000D804B /* HomePageViewModel.swift in Sources */,
 				431BEC412A03C84400E54B5B /* IdeasView.swift in Sources */,
 				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
+				D66127FF2A0508CB00A9167F /* RoomModel.swift in Sources */,
 				43EB15492A024EA300C18489 /* RoomFormViewModel.swift in Sources */,
 				43EB15472A024E4F00C18489 /* RoomFormView.swift in Sources */,
 				431BEC432A03C84F00E54B5B /* IdeasViewModel.swift in Sources */,
@@ -685,7 +697,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-SpontanUhuy/Preview Content\"";
-				DEVELOPMENT_TEAM = G4VYKVQHB6;
+				DEVELOPMENT_TEAM = 47BZXPDJKC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-SpontanUhuy/Info.plist";
@@ -725,7 +737,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MC1-SpontanUhuy/Preview Content\"";
-				DEVELOPMENT_TEAM = G4VYKVQHB6;
+				DEVELOPMENT_TEAM = 47BZXPDJKC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MC1-SpontanUhuy/Info.plist";

@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct HomePageView: View {
-    @StateObject var homePageViewModel = HomePageViewModel()
+struct HomepageView: View {
+    
+    @StateObject var homepageViewModel = HomepageViewModel()
     
     var body: some View {
         ZStack {
@@ -59,44 +60,65 @@ struct HomePageView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
                     VStack {
-                        ForEach(0...5, id: \.self) { _ in
-                            HStack {
-                                Image("DummyRoomPic")
-                                    .cornerRadius(15)
-                                
-                                Spacer()
-                                
-                                VStack(alignment: .leading) {
-                                    Text("Bedroom 1")
-                                    Text("Last edited: Saturday, 15:30")
-                                        .font(.caption)
-                                }
-                                .foregroundColor(Color(hex: Constants.Color.primaryBlue))
-                                
-                                VStack {
-                                    Button {
-                                        print("Open AR View")
-                                    } label: {
-                                        Image(systemName: "camera.viewfinder")
-                                            .foregroundColor(.white)
-                                            .padding(5)
-                                            .background {
-                                                Circle()
-                                                    .fill(Color(hex: Constants.Color.primaryBlue))
+                        ForEach(0...5, id: \.self) { index in
+                            NavigationLink {
+                                RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .editRoom, roomNameField: "Bedroom 1"))
+                                    .navigationBarBackButtonHidden()
+                            } label: {
+                                HStack {
+                                    Group {
+                                        // TODO: Show based on image availability
+                                        if index % 2 == 0 {
+                                            Image("DummyRoomPic")
+                                                .cornerRadius(15)
+                                        } else {
+                                            ZStack {
+                                                Color(.lightGray)
+                                                Text("No Image")
+                                                    .foregroundColor(.gray)
                                             }
+                                        }
                                     }
+                                    .frame(width: 150, height: 100)
+                                    .cornerRadius(15)
+                                    
+                                    
+                                    VStack(alignment: .leading, spacing: 10) {
+                                        Text("Bedroom 1")
+                                            .fontWeight(.bold)
+                                        Text("Last edited: 04/05/2023, 15:30")
+                                            .font(.caption)
+                                    }
+                                    .foregroundColor(Color(hex: Constants.Color.primaryBlue))
+                                    .multilineTextAlignment(.leading)
                                     
                                     Spacer()
                                     
+                                    VStack {
+                                        Button {
+                                            print("Open AR View")
+                                        } label: {
+                                            Image(systemName: "camera.viewfinder")
+                                                .foregroundColor(Color(hex: Constants.Color.primaryBlue))
+                                                .padding(5)
+                                                .overlay {
+                                                    Circle()
+                                                        .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                                                }
+                                        }
+                                        
+                                        Spacer()
+                                        
+                                    }
                                 }
-                            }
-                            .padding()
-                            .frame(maxWidth: .infinity, maxHeight: 123)
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 15)
-                                    .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                            }
+                                .padding()
+                                .frame(maxWidth: .infinity, maxHeight: 123)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                                }
                             .cornerRadius(15)
+                            }
                         }
                     }
                     .padding(.horizontal)

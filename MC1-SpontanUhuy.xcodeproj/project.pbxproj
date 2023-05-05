@@ -10,6 +10,8 @@
 		325E75DD2A0116F70078FD6C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75DC2A0116F70078FD6C /* SplashScreenView.swift */; };
 		325E75E62A023A590078FD6C /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75E52A023A590078FD6C /* VideoPlayerView.swift */; };
 		325E75ED2A0253FA0078FD6C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325E75EC2A0253FA0078FD6C /* OnboardingView.swift */; };
+		431BEC412A03C84400E54B5B /* IdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431BEC402A03C84400E54B5B /* IdeasView.swift */; };
+		431BEC432A03C84F00E54B5B /* IdeasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431BEC422A03C84F00E54B5B /* IdeasViewModel.swift */; };
 		43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB429EC64F3007F1C20 /* MyApp.swift */; };
 		43694FB729EC64F3007F1C20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43694FB629EC64F3007F1C20 /* ContentView.swift */; };
 		43694FB929EC64F4007F1C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43694FB829EC64F4007F1C20 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 		43EB153F2A0100C400C18489 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB153E2A0100C400C18489 /* Color.swift */; };
 		43EB15412A01044200C18489 /* RoomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15402A01044200C18489 /* RoomCard.swift */; };
 		43EB15432A01138800C18489 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15422A01138800C18489 /* Constants.swift */; };
+		43EB15472A024E4F00C18489 /* RoomFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15462A024E4F00C18489 /* RoomFormView.swift */; };
+		43EB15492A024EA300C18489 /* RoomFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EB15482A024EA300C18489 /* RoomFormViewModel.swift */; };
 		D616022929FFE49900C3DFB9 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616022829FFE49900C3DFB9 /* RoomView.swift */; };
 		D616022C29FFF12900C3DFB9 /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D616022B29FFF12900C3DFB9 /* CustomARView.swift */; };
 		D61602322A00032B00C3DFB9 /* Indian_Furniture.usdz in Resources */ = {isa = PBXBuildFile; fileRef = D61602312A00032B00C3DFB9 /* Indian_Furniture.usdz */; };
@@ -39,6 +43,8 @@
 		325E75DC2A0116F70078FD6C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		325E75E52A023A590078FD6C /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		325E75EC2A0253FA0078FD6C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		431BEC402A03C84400E54B5B /* IdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasView.swift; sourceTree = "<group>"; };
+		431BEC422A03C84F00E54B5B /* IdeasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasViewModel.swift; sourceTree = "<group>"; };
 		43694FB129EC64F3007F1C20 /* MC1-SpontanUhuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC1-SpontanUhuy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43694FB429EC64F3007F1C20 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 		43694FB629EC64F3007F1C20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 		43EB153E2A0100C400C18489 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		43EB15402A01044200C18489 /* RoomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCard.swift; sourceTree = "<group>"; };
 		43EB15422A01138800C18489 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43EB15462A024E4F00C18489 /* RoomFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFormView.swift; sourceTree = "<group>"; };
+		43EB15482A024EA300C18489 /* RoomFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFormViewModel.swift; sourceTree = "<group>"; };
 		D616022829FFE49900C3DFB9 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		D616022B29FFF12900C3DFB9 /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
 		D616022D29FFFCEA00C3DFB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -178,6 +186,9 @@
 			children = (
 				D61602342A000A1F00C3DFB9 /* RoomViewModel.swift */,
 				4377120C2A00EEE4000D804B /* HomePageViewModel.swift */,
+				4377120C2A00EEE4000D804B /* HomepageViewModel.swift */,
+				43EB15482A024EA300C18489 /* RoomFormViewModel.swift */,
+				431BEC422A03C84F00E54B5B /* IdeasViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -197,6 +208,10 @@
 				D68CC3382A0358420010D754 /* RoomScreen */,
 				325E75EB2A0253760078FD6C /* OnboardingScreen */,
 				325E75E42A023A3B0078FD6C /* SplashScreen */,
+				D687D19329F53AF400B38E30 /* SplashScreenView.swift */,
+				431BEC402A03C84400E54B5B /* IdeasView.swift */,
+				43EB153B2A00F20300C18489 /* HomepageView.swift */,
+				43EB15462A024E4F00C18489 /* RoomFormView.swift */,
 				43694FB629EC64F3007F1C20 /* ContentView.swift */,
 			);
 			path = Views;
@@ -340,6 +355,15 @@
 				4377120D2A00EEE4000D804B /* HomePageViewModel.swift in Sources */,
 				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
 				43EB153C2A00F20300C18489 /* HomePageView.swift in Sources */,
+				43EB15412A01044200C18489 /* RoomCard.swift in Sources */,
+				4377120D2A00EEE4000D804B /* HomepageViewModel.swift in Sources */,
+				431BEC412A03C84400E54B5B /* IdeasView.swift in Sources */,
+				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
+				43EB15492A024EA300C18489 /* RoomFormViewModel.swift in Sources */,
+				43EB153C2A00F20300C18489 /* HomepageView.swift in Sources */,
+				43EB15472A024E4F00C18489 /* RoomFormView.swift in Sources */,
+				D687D19429F53AF400B38E30 /* SplashScreenView.swift in Sources */,
+				431BEC432A03C84F00E54B5B /* IdeasViewModel.swift in Sources */,
 				43EB153F2A0100C400C18489 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

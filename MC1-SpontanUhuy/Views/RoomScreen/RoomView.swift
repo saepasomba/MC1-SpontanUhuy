@@ -65,15 +65,23 @@ struct RoomSidebar: View {
                 Spacer()
                 VStack {
                     Button {
-                        sidebarOpened = !sidebarOpened
+                        if !viewModel.isLoading {
+                            sidebarOpened = !sidebarOpened
+                        }
                     } label: {
-                        Image("icon.furniture")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 24, height: 24)
-                            .padding(8)
-                            .padding(.vertical, 2)
-                            .animation(.easeIn(duration: 0.4), value: sidebarOpened)
+                        if viewModel.isLoading {
+                            ProgressView()
+                                .progressViewStyle(.circular)
+                                .frame(width: 24, height: 24)
+                        } else {
+                            Image("icon.furniture")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .padding(8)
+                                .padding(.vertical, 2)
+                                .animation(.easeIn(duration: 0.4), value: sidebarOpened)
+                        }
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(Color(hex: 0xFF3A6385))
@@ -86,6 +94,7 @@ struct RoomSidebar: View {
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 24, height: 24)
+                                    
                                     Text(category.name)
                                         .font(.caption2)
                                         .fontWeight(.semibold)
@@ -126,7 +135,17 @@ struct RoomSidebar: View {
                         viewModel.deleteFurniture()
                         selectedFurniture = nil
                     } label: {
-                        Image(systemName: "xmark.circle")
+                        Image("icon.clear.rounded")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 36, height: 36)
+                            .padding(.horizontal)
+                    }
+                    
+                    Button {
+                        viewModel.deselectFurniture()
+                    } label: {
+                        Image("icon.checklist.rounded")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 36, height: 36)
@@ -134,9 +153,10 @@ struct RoomSidebar: View {
                     }
                 }
                 
-                if selectedFurniture != nil {
+                if let selected = selectedFurniture {
                     Button {
-                        viewModel.chosenModelToPlace = selectedFurniture
+                        viewModel.selectModelToPlace(model: selected)
+                        selectedFurniture = nil
                     } label: {
                         Image("icon.place")
                             .resizable()
@@ -147,46 +167,14 @@ struct RoomSidebar: View {
             }.padding()
             
             if !(selectedCategory?.name ?? "").isEmpty {
-                HStack(alignment: .center) {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(.white)
-                    
-                    ScrollView(.horizontal) {
-                        LazyHStack(alignment: .center) {
-                            ForEach((selectedCategory?.furnitures ?? [])) { furniture in
-                                VStack(alignment: .center) {
-                                    AsyncImage(url: URL(string: furniture.imageURL)!)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 40, height: 40)
-                                    Text(furniture.name)
-                                }
-                                .padding(12)
-                                .background(
-                                    Color(
-                                        hex: selectedFurniture == furniture ? 0xFF71B4D0 : 0xFFFFFFFF,
-                                        alpha: 0.7
-                                    )
-                                )
-                                .cornerRadius(8)
-                                .onTapGesture {
-                                      selectedFurniture = furniture
-                                }
-                                .padding(.trailing, furniture == selectedCategory?.furnitures.last ? 0 : 8)
-                            }
-                        }
+                FurnitureList(
+                    furnitures: viewModel.furnitures,
+                    selectedFurniture: $selectedFurniture,
+                    selectedCategory: $selectedCategory,
+                    onFurnitureClicked: {
+                        viewModel.deselectFurniture()
                     }
-                    .scrollIndicators(.hidden)
-                    
-                    Image(systemName: "chevron.right").foregroundColor(.white)
-                }
-                .frame(height: 90)
-                .padding()
-                .background(Color(hex: 0xFF212121, alpha: 0.8))
-                .cornerRadius(8)
-                .animation(.easeIn(duration: 0.6), value: selectedCategory)
-                .padding(.horizontal)
-                .padding(.bottom)
+                )
             }
         }
         .task {
@@ -194,6 +182,7 @@ struct RoomSidebar: View {
         }
     }
 }
+
 
 struct RoomSidebar_Previews: PreviewProvider {
     static var previews: some View {

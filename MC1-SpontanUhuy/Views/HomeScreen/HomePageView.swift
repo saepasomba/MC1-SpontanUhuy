@@ -171,6 +171,7 @@ struct HomeTopBar: View {
                     }
             }
             .cornerRadius(5)
+            
             Button {
                 print("Favourite View")
             } label: {
@@ -185,6 +186,7 @@ struct HomeTopBar: View {
             
         }
         .padding(.horizontal)
+        .foregroundColor(Color(hex: Constants.Color.primaryBlue))
     }
 }
 

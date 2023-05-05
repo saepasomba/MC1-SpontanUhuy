@@ -48,13 +48,20 @@ class RoomViewModel: ObservableObject {
         }
     }
     
-    func selectModelToPlace(model: String) {
-        
+    func selectModelToPlace(model: FurnitureModel) {
+        chosenModelToPlace = model
     }
     
     func selectFurniture(furniture: FurnitureChosenModel) {
         DispatchQueue.main.async {
             self.furnitureSelected = furniture
+        }
+    }
+    
+    func deselectFurniture() {
+        if let selected = furnitureSelected {
+            selected.model.setAllMaterials(materials: selected.defaultMaterials)
+            furnitureSelected = nil
         }
     }
     

@@ -31,6 +31,8 @@
 		D62B1C372A03B29400C314AB /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62B1C362A03B29400C314AB /* CategoryModel.swift */; };
 		D67C83C52A04E115004AA520 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C83C42A04E115004AA520 /* ContentView.swift */; };
 		D67C83C72A04E141004AA520 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C83C62A04E141004AA520 /* HomePageView.swift */; };
+		D67C83C92A04E535004AA520 /* FurnitureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C83C82A04E535004AA520 /* FurnitureCard.swift */; };
+		D67C83CB2A04EB1F004AA520 /* FurnitureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C83CA2A04EB1F004AA520 /* FurnitureList.swift */; };
 		D68CC3352A0356E50010D754 /* ModelEntity+Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CC3342A0356E50010D754 /* ModelEntity+Material.swift */; };
 		D68CC3372A03571C0010D754 /* TemanRuangVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D68CC3362A03571C0010D754 /* TemanRuangVideo.mp4 */; };
 		D6D869162A04A71400AC699A /* RecommendationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D869152A04A71400AC699A /* RecommendationModel.swift */; };
@@ -65,6 +67,8 @@
 		D62B1C362A03B29400C314AB /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		D67C83C42A04E115004AA520 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D67C83C62A04E141004AA520 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		D67C83C82A04E535004AA520 /* FurnitureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureCard.swift; sourceTree = "<group>"; };
+		D67C83CA2A04EB1F004AA520 /* FurnitureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureList.swift; sourceTree = "<group>"; };
 		D68CC3342A0356E50010D754 /* ModelEntity+Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity+Material.swift"; sourceTree = "<group>"; };
 		D68CC3362A03571C0010D754 /* TemanRuangVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TemanRuangVideo.mp4; sourceTree = "<group>"; };
 		D6D869152A04A71400AC699A /* RecommendationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationModel.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				43EB15402A01044200C18489 /* RoomCard.swift */,
+				D67C83C82A04E535004AA520 /* FurnitureCard.swift */,
+				D67C83CA2A04EB1F004AA520 /* FurnitureList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -348,12 +354,14 @@
 				D67C83C52A04E115004AA520 /* ContentView.swift in Sources */,
 				D6F409122A01075200F45796 /* FurnitureRepository.swift in Sources */,
 				43EB15412A01044200C18489 /* RoomCard.swift in Sources */,
+				D67C83C92A04E535004AA520 /* FurnitureCard.swift in Sources */,
 				4377120D2A00EEE4000D804B /* HomePageViewModel.swift in Sources */,
 				431BEC412A03C84400E54B5B /* IdeasView.swift in Sources */,
 				43694FB529EC64F3007F1C20 /* MyApp.swift in Sources */,
 				43EB15492A024EA300C18489 /* RoomFormViewModel.swift in Sources */,
 				43EB15472A024E4F00C18489 /* RoomFormView.swift in Sources */,
 				431BEC432A03C84F00E54B5B /* IdeasViewModel.swift in Sources */,
+				D67C83CB2A04EB1F004AA520 /* FurnitureList.swift in Sources */,
 				43EB153F2A0100C400C18489 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

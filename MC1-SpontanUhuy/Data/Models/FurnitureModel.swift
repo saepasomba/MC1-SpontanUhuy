@@ -15,18 +15,21 @@ class FurnitureModel: Identifiable {
     let name: String
     let price: Int64
     let fileName: String
+    let imageURL: String
     var model: ModelEntity? = nil
     
     init?(record: CKRecord) {
         guard let name = record["name"] as? String,
               let price = record["price"] as? Int64,
-              let fileName = record["name"] as? String
+              let fileName = record["name"] as? String,
+              let imageURL = record["imageURL"] as? String
         else { return nil }
         
         id = record.recordID
         self.name = name
         self.price = price
         self.fileName = fileName
+        self.imageURL = imageURL
     }
 }
 

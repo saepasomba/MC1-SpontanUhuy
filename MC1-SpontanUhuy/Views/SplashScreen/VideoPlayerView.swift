@@ -30,7 +30,18 @@ class PlayerUIView: UIView {
         super.init(frame: frame)
 
         // Load The Resource
-        let fileUrl = Bundle.main.url(forResource: "TemanRuangVideo", withExtension: "mp4")!
+        var fileUrl: URL
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Iphone", withExtension: "mp4")!
+        } else {
+            if UIDevice.current.orientation == .landscapeLeft {
+                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Landscape", withExtension: "mp4")!
+            } else if UIDevice.current.orientation == .landscapeRight {
+                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Landscape", withExtension: "mp4")!
+            } else {
+                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Portrait", withExtension: "mp4")!
+            }
+        }
         
         // Setup The Player
         let player = AVPlayer(url: fileUrl)
@@ -45,7 +56,7 @@ class PlayerUIView: UIView {
 //                                               name: .AVPlayerItemDidPlayToEndTime,
 //                                               object: player.currentItem)
 
-        // Start the movie
+        // Start the video
         player.play()
     }
     

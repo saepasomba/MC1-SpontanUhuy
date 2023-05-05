@@ -7,30 +7,49 @@
 
 import SwiftUI
 
-struct OnboardingView: View {
+struct OnboardpageView: View {
+    
     var body: some View {
         ZStack {
-            Image("OnboardBG")
-                .resizable()
-                .ignoresSafeArea()
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                Image("OnboardBG_Iphone")
+                    .resizable()
+                    .ignoresSafeArea()
+            } else {
+                if UIDevice.current.orientation == .landscapeLeft {
+                    Image("OnboardBG_Landscape")
+                        .resizable()
+                        .ignoresSafeArea()
+                }
+                else if UIDevice.current.orientation == .landscapeRight {
+                    Image("OnboardBG_Landscape")
+                        .resizable()
+                        .ignoresSafeArea()
+                }
+                else {
+                    Image("OnboardBG_Portrait")
+                        .resizable()
+                        .ignoresSafeArea()
+                }
+            }
             
             VStack (alignment: .leading) {
                 Spacer()
                 Group {
                     Text("Design Home Space on Your Own")
                         .font(.system(size: 34))
-                        .padding(.bottom, 15)
+                        .padding(.bottom, 8)
                         .fontWeight(.medium)
                     Text("Augmented Reality helps you visualize your imaginary home space.")
                         .font(.system(size: 17))
                     Text("More than just a room, more than usual.")
                         .font(.system(size: 17))
-                        .padding(.bottom, 67)
+                        .padding(.bottom, 32)
                 }
                 .foregroundColor(
                     Color(hex: Constants.Color.primaryBlue)
                 )
-                
+
                 NavigationLink {
                     HomePageView().navigationBarBackButtonHidden()
                 } label: {

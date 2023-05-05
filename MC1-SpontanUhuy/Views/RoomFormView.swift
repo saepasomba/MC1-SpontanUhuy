@@ -47,38 +47,56 @@ struct RoomFormView: View {
             Text("Add Your Room Image")
                 .frame(maxWidth: .infinity, alignment: .leading)
             PhotosPicker(selection: $roomFormViewModel.selectedItem, matching: .any(of: [.images, .not(.livePhotos)])) {
-                if let selectedPhotoData = roomFormViewModel.selectedPhotoData {
-                    if let image = UIImage(data: selectedPhotoData) {
-                        VStack {
-                            ZStack {
-                                Image(uiImage: image)
+                //                if let selectedPhotoData = roomFormViewModel.selectedPhotoData {
+                //                    if let image = UIImage(data: selectedPhotoData) {
+                //                        VStack {
+                //                            ZStack {
+                //                                Image(uiImage: image)
+                //                                    .resizable()
+                //                                    .scaledToFit()
+                //                                    .cornerRadius(15)
+                //                                    .overlay {
+                //                                        ZStack {
+                //                                            RoundedRectangle(cornerRadius: 15)
+                //                                                .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                //                                            RoundedRectangle(cornerRadius: 15)
+                //                                                .fill(Color(.black).opacity(0.4))
+                //                                        }
+                //                                    }
+                //
+                //                                Text("Edit Image")
+                //                                    .foregroundColor(.white)
+                //                            }
+                //
+                //                            Button {
+                //                                withAnimation(Animation.easeIn(duration: 0.2)) {
+                //                                    roomFormViewModel.selectedPhotoData = nil
+                //                                }
+                //                            } label: {
+                //                                Text("Remove Image")
+                //                                    .padding(.top)
+                //                                    .foregroundColor(.red)
+                //                            }
+                //
+                //                        }
+                //                    }
+                if let isUploadingStatus = roomFormViewModel.isUploading {
+                    if isUploadingStatus {
+                        ProgressView()
+                        
+                    } else {
+                        AsyncImage(
+                            url: roomFormViewModel.imageUrl,
+                            content: { image in
+                                image
                                     .resizable()
                                     .scaledToFit()
                                     .cornerRadius(15)
-                                    .overlay {
-                                        ZStack {
-                                            RoundedRectangle(cornerRadius: 15)
-                                                .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                                            RoundedRectangle(cornerRadius: 15)
-                                                .fill(Color(.black).opacity(0.4))
-                                        }
-                                    }
+                            },
+                            placeholder: {
                                 
-                                Text("Edit Image")
-                                    .foregroundColor(.white)
                             }
-                            
-                            Button {
-                                withAnimation(Animation.easeIn(duration: 0.2)) {
-                                    roomFormViewModel.selectedPhotoData = nil
-                                }
-                            } label: {
-                                Text("Remove Image")
-                                    .padding(.top)
-                                    .foregroundColor(.red)
-                            }
-
-                        }
+                        )
                     }
                 } else {
                     VStack {
@@ -96,6 +114,7 @@ struct RoomFormView: View {
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
                         roomFormViewModel.selectedPhotoData = data
+                        roomFormViewModel.uploadImage(data: data)
                     }
                 }
             }

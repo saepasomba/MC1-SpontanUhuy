@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct HomepageView: View {
+struct HomePageView: View {
     
-    @StateObject var homepageViewModel = HomepageViewModel()
+    @StateObject var homePageViewModel = HomePageViewModel()
     
     var body: some View {
         ZStack {

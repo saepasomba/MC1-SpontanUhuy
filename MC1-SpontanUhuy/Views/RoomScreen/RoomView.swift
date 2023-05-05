@@ -155,7 +155,7 @@ struct RoomSidebar: View {
                         LazyHStack(alignment: .center) {
                             ForEach((selectedCategory?.furnitures ?? [])) { furniture in
                                 VStack(alignment: .center) {
-                                    AsyncImage(url: URL(string: furniture.imageURL))
+                                    AsyncImage(url: URL(string: furniture.imageURL)!)
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 40, height: 40)

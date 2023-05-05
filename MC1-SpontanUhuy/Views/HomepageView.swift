@@ -97,6 +97,7 @@ struct HomepageView: View {
                                             ZStack {
                                                 Color(.lightGray)
                                                 Text("No Image")
+                                                    .foregroundColor(.gray)
                                             }
                                         }
                                     }

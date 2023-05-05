@@ -17,7 +17,7 @@ struct ContentView: View {
                 .navigationDestination(
                     isPresented: $isFinished,
                     destination: {
-                        OnboardingView()
+                        OnboardPageView()
                             .navigationBarBackButtonHidden()
                     }
                 )

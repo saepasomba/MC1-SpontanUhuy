@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardpageView: View {
+struct OnboardPageView: View {
     
     var body: some View {
         ZStack {
@@ -49,7 +49,7 @@ struct OnboardpageView: View {
                 .foregroundColor(
                     Color(hex: Constants.Color.primaryBlue)
                 )
-
+                
                 NavigationLink {
                     HomePageView().navigationBarBackButtonHidden()
                 } label: {
@@ -58,9 +58,7 @@ struct OnboardpageView: View {
                         .padding()
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
-                        .background {
-                            Color(hex: Constants.Color.primaryBlue)
-                        }
+                        .background { Color(hex: Constants.Color.primaryBlue) }
                         .cornerRadius(8)
                 }
             }
@@ -69,8 +67,8 @@ struct OnboardpageView: View {
     }
 }
 
-struct OnboardingView_Previews: PreviewProvider {
+struct OnboardPageView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardPageView()
     }
 }

@@ -30,34 +30,36 @@ class PlayerUIView: UIView {
         super.init(frame: frame)
 
         // Load The Resource
-        var fileUrl: URL
+        var fileUrl: URL?
+        
         if UIDevice.current.userInterfaceIdiom == .phone {
-            fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Iphone", withExtension: "mp4")!
+            fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Iphone", withExtension: "mp4")
         } else {
             if UIDevice.current.orientation == .landscapeLeft {
-                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Landscape", withExtension: "mp4")!
+                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Landscape", withExtension: "mp4")
             } else if UIDevice.current.orientation == .landscapeRight {
-                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Landscape", withExtension: "mp4")!
+                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Landscape", withExtension: "mp4")
             } else {
-                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Portrait", withExtension: "mp4")!
+                fileUrl = Bundle.main.url(forResource: "TemanRuangVideo_Portrait", withExtension: "mp4")
             }
         }
         
-        // Setup The Player
-        let player = AVPlayer(url: fileUrl)
-        playerLayer.player = player
-        playerLayer.videoGravity = .resizeAspectFill
-        layer.addSublayer(playerLayer)
-        
-        // Setup Looping
-//        player.actionAtItemEnd = .none
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(playerItemDidReachEnd(notification:)),
-//                                               name: .AVPlayerItemDidPlayToEndTime,
-//                                               object: player.currentItem)
+        if let url = fileUrl {
+            let player = AVPlayer(url: url)
+            playerLayer.player = player
+            playerLayer.videoGravity = .resizeAspectFill
+            layer.addSublayer(playerLayer)
+            
+            // Setup Looping
+    //        player.actionAtItemEnd = .none
+    //        NotificationCenter.default.addObserver(self,
+    //                                               selector: #selector(playerItemDidReachEnd(notification:)),
+    //                                               name: .AVPlayerItemDidPlayToEndTime,
+    //                                               object: player.currentItem)
 
-        // Start the video
-        player.play()
+            // Start the video
+            player.play()
+        }
     }
     
     @objc

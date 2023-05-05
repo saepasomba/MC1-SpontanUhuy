@@ -19,16 +19,12 @@ struct SplashScreenView: View {
     var body: some View {
         VStack {
             if isActive {
-                VideoPlayerView().ignoresSafeArea()
+                VideoPlayerView()
+                    .ignoresSafeArea()
             } else {
                 ZStack {
-                    Color(hex: Constants.Color.primaryCyan)
+                    Color(hex: Constants.Color.primaryBlue)
                         .ignoresSafeArea()
-                    VStack {
-                        Image("TemanRuang")
-                            .resizable()
-                            .scaledToFit()
-                    }
                 }.onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         withAnimation {

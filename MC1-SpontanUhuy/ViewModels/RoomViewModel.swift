@@ -20,10 +20,16 @@ class RoomViewModel: ObservableObject {
     @Published var furnitureAdded: [FurnitureChosenModel] = []
     @Published var furnitureSelected: FurnitureChosenModel? = nil
     
+    @Published var isLoading: Bool = false
+    
     private let repository = FurnitureRepository()
     var sceneObserver: Cancellable?
     
     func initData() async {
+        DispatchQueue.main.async {
+            self.isLoading = true
+        }
+        
         do {
             let categories = try await repository.getCategories()
             DispatchQueue.main.async {
@@ -32,10 +38,11 @@ class RoomViewModel: ObservableObject {
             
             let furnitures = try await repository.fetchFurnitures()
             DispatchQueue.main.async {
-                let furniture = try! ModelEntity.loadModel(contentsOf: Bundle.main.url(forResource: furnitures[0].fileName, withExtension: "usdz")!)
-                self.furnitureAdded = [FurnitureChosenModel(model: furniture, defaultMaterials: furniture.model?.materials ?? [])]
+                self.furnitureAdded = []
                 self.furnitures = furnitures
+                self.isLoading = false
             }
+            
         } catch {
             print("Error is \(error)")
         }

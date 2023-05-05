@@ -47,36 +47,13 @@ struct RoomSidebar: View {
                         .scaledToFit()
                         .frame(width: 36, height: 36)
                 }
-                Spacer()
-                if viewModel.furnitureSelected != nil {
-                    Button {
-                        viewModel.deleteFurniture()
-                        selectedFurniture = nil
-                    } label: {
-                        Image(systemName: "xmark.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 36, height: 36)
-                            .padding(.horizontal)
-                    }
-                }
-                if selectedFurniture != nil {
-                    Button {
-                        viewModel.chosenModelToPlace = selectedFurniture
-                    } label: {
-                        Image("Image Checklist")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 36, height: 36)
-                    }
-                }
                 
                 Spacer()
                 
                 Button {
                     print("Save")
                 } label: {
-                    Image(systemName: "square.and.arrow.down")
+                    Image("image.checklist")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 36, height: 36)
@@ -90,11 +67,10 @@ struct RoomSidebar: View {
                     Button {
                         sidebarOpened = !sidebarOpened
                     } label: {
-                        Image(systemName: "chevron.right")
+                        Image("icon.furniture")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 24, height: 24)
-                            .rotationEffect(Angle(degrees: sidebarOpened ? 0 : 180))
                             .padding(8)
                             .padding(.vertical, 2)
                             .animation(.easeIn(duration: 0.4), value: sidebarOpened)
@@ -144,6 +120,32 @@ struct RoomSidebar: View {
             
             Spacer()
             
+            HStack(spacing: 14) {
+                if viewModel.furnitureSelected != nil {
+                    Button {
+                        viewModel.deleteFurniture()
+                        selectedFurniture = nil
+                    } label: {
+                        Image(systemName: "xmark.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 36, height: 36)
+                            .padding(.horizontal)
+                    }
+                }
+                
+                if selectedFurniture != nil {
+                    Button {
+                        viewModel.chosenModelToPlace = selectedFurniture
+                    } label: {
+                        Image("icon.place")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 36, height: 36)
+                    }
+                }
+            }.padding()
+            
             if !(selectedCategory?.name ?? "").isEmpty {
                 HStack(alignment: .center) {
                     Image(systemName: "chevron.left")
@@ -153,7 +155,7 @@ struct RoomSidebar: View {
                         LazyHStack(alignment: .center) {
                             ForEach((selectedCategory?.furnitures ?? [])) { furniture in
                                 VStack(alignment: .center) {
-                                    Image("Category Chair")
+                                    AsyncImage(url: URL(string: furniture.imageURL))
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 40, height: 40)

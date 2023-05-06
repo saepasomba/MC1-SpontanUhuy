@@ -141,7 +141,7 @@ struct RoomFormView: View {
                         
                         Button {
                             withAnimation(Animation.easeIn(duration: 0.2)) {
-                                roomFormViewModel.selectedPhotoData = nil
+                                roomFormViewModel.imageURL = nil
                             }
                         } label: {
                             Text("Remove Image")
@@ -194,7 +194,9 @@ struct RoomFormView: View {
                 
                 if roomFormViewModel.viewState == .editRoom {
                     Button {
-                        print("Hello")
+                        Task {
+                            await roomFormViewModel.delete(roomId: roomFormViewModel.room!.id)
+                        }
                     } label: {
                         Text("Delete Room")
                             .foregroundColor(.red)
@@ -216,6 +218,6 @@ struct RoomFormView: View {
 
 struct RoomFormView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .newRoom, room: nil))
+        RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .editRoom, room: nil))
     }
 }

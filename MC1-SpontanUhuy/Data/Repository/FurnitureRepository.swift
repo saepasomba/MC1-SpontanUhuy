@@ -192,4 +192,17 @@ class FurnitureRepository {
         
         request.resume()
     }
+    
+    func deleteRoom(id: CKRecord.ID?) async throws -> Bool {
+            do {
+                if let id = id {
+                    let _ = try await privateDB.deleteRecord(withID: id)
+                    return true
+                } else {
+                    return false
+                }
+            } catch {
+                return false
+            }
+        }
 }

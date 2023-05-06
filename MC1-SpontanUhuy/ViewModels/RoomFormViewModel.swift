@@ -9,6 +9,7 @@ import Foundation
 import PhotosUI
 import _PhotosUI_SwiftUI
 import Cloudinary
+import CloudKit
 
 enum RoomFormViewState {
     case newRoom
@@ -83,6 +84,30 @@ class RoomFormViewModel: ObservableObject {
                         }
                     }
                 })
+            }
+        }
+    }
+    
+    func delete(roomId: CKRecord.ID) async {
+        DispatchQueue.main.async {
+            self.isLoading = true
+        }
+        
+        if let id = room?.id {
+            do {
+                let isSuccess = try await repository.deleteRoom(id: id)
+                self.isLoading = false
+                
+                switch isSuccess {
+                case true:
+                    self.successAddRoom = true
+                    
+                case false:
+                    self.successAddRoom = false
+                }
+            } catch {
+                self.isLoading = false
+                print(error)
             }
         }
     }

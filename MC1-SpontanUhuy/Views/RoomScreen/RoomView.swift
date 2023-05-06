@@ -9,7 +9,7 @@ import SwiftUI
 import RealityKit
 
 struct RoomView: View {
-    @EnvironmentObject var viewModel: RoomViewModel
+    @StateObject var viewModel: RoomViewModel
     @State private var selectedFurniture: FurnitureModel? = nil
     
     var body: some View {
@@ -17,6 +17,7 @@ struct RoomView: View {
             RoomContainerView().ignoresSafeArea()
             RoomSidebar(selectedFurniture: $selectedFurniture)
         }
+        .environmentObject(viewModel)
     }
 }
 
@@ -27,6 +28,7 @@ struct RoomSidebar: View {
     @Binding private var selectedFurniture: FurnitureModel?
     
     @State private var sidebarOpened = false
+    @State private var dialogOpened = false
     @State private var selectedCategory: CategoryModel? = nil
     
     init(selectedFurniture: Binding<FurnitureModel?>) {
@@ -51,7 +53,7 @@ struct RoomSidebar: View {
                 Spacer()
                 
                 Button {
-                    print("Save")
+                    dialogOpened = true
                 } label: {
                     Image("image.checklist")
                         .resizable()
@@ -168,7 +170,7 @@ struct RoomSidebar: View {
             
             if !(selectedCategory?.name ?? "").isEmpty {
                 FurnitureList(
-                    furnitures: viewModel.furnitures,
+                    furnitures: selectedCategory?.furnitures ?? [],
                     selectedFurniture: $selectedFurniture,
                     selectedCategory: $selectedCategory,
                     onFurnitureClicked: {
@@ -180,21 +182,33 @@ struct RoomSidebar: View {
         .task {
             await viewModel.initData()
         }
+        .onChange(of: viewModel.successUpdate) { newValue in
+            if newValue {
+                dismiss()
+            }
+        }
+        .confirmationDialog("Are you sure you want to save your work?", isPresented: $dialogOpened) {
+            Button("Yes") {
+                selectedFurniture = nil
+                selectedCategory = nil
+                Task {
+                    await viewModel.save()
+                }
+            }
+        }
     }
 }
 
 
 struct RoomSidebar_Previews: PreviewProvider {
     static var previews: some View {
-        RoomView()
-            .environmentObject(RoomViewModel())
+        RoomView(viewModel: RoomViewModel(room: nil))
     }
 }
 
 struct RoomSidebarIpad_Previews: PreviewProvider {
     static var previews: some View {
-        RoomView()
-            .environmentObject(RoomViewModel())
+        RoomView(viewModel: RoomViewModel(room: nil))
             .previewDevice(PreviewDevice(rawValue: "iPad (10th generation)"))
     }
 }

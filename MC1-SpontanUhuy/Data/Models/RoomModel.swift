@@ -17,9 +17,13 @@ class RoomModel: Identifiable {
     
     init?(record: CKRecord) async {
         guard let name = record["name"] as? String,
-              let imageURL = record["imageURL"] as? String,
-              let historyReference = record["furnitures"] as? [CKRecord.Reference]
-        else { return nil }
+              let imageURL = record["imageURL"] as? String
+        else {
+            print("Return nil \(record.allKeys())")
+            return nil
+        }
+        
+        let historyReference = (record["furnitures"] as? [CKRecord.Reference]) ?? []
         
         var furnitures = [FurnitureHistoryModel]()
         let db = CKContainer(identifier: "iCloud.id.spontan-uhuy.TemanRuang.TestContainer").privateCloudDatabase

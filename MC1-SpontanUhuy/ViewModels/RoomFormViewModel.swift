@@ -17,39 +17,73 @@ enum RoomFormViewState {
 
 class RoomFormViewModel: ObservableObject {
     @Published var viewState: RoomFormViewState
-    @Published var roomNameField: String
-    @Published var selectedItem: PhotosPickerItem?
-    @Published var selectedPhotoData: Data?
-    @Published var isUploading: Bool?
-    @Published var imageUrl: URL?
+    @Published var room: RoomModel?
+    @Published var name: String = ""
+    @Published var imageURL: String? = nil
+    @Published var selectedItem: PhotosPickerItem? = nil
+    @Published var selectedPhotoData: Data? = nil
+    @Published var isLoading = false
+    @Published var successAddRoom = false
     
-    var config: CLDConfiguration
-    var cloudinary: CLDCloudinary
+    private let repository = FurnitureRepository()
     
-    init(viewState: RoomFormViewState, roomNameField: String = "", selectedItem: PhotosPickerItem? = nil, selectedPhotoData: Data? = nil) {
+    init(
+        viewState: RoomFormViewState,
+        room: RoomModel?,
+        name: String = "",
+        imageURL: String? = nil
+    ) {
         self.viewState = viewState
-        self.roomNameField = roomNameField
+        self.room = room
+        self.name = name
         self.selectedItem = selectedItem
-        self.selectedPhotoData = selectedPhotoData
-        
-        self.config = CLDConfiguration(cloudName: "dggxoopi8", apiKey: "898787985328797")
-        self.cloudinary = CLDCloudinary(configuration: config)
+        self.imageURL = imageURL
     }
     
-    func uploadImage(data: Data) {
-        let request = cloudinary.createUploader().upload(
-            data: data, uploadPreset: "ebd8r09c") { progress in
-                self.isUploading = true
-                print("UPLOADING...")
-            } completionHandler: { result, error in
-                self.isUploading = false
-                print("FINISHED!")
-                if let safeResult = result {
-                    let secureUrl = "https" + safeResult.url!.dropFirst(4)
-                    self.imageUrl = URL(string: secureUrl)
-                }
+    func save() async {
+        switch viewState {
+        case .newRoom:
+            DispatchQueue.main.async {
+                self.isLoading = true
             }
-        
-        request.resume()
+            
+            if let data = selectedPhotoData {
+                await repository.insertRoom(name: name, imageData: data, completion: { results in
+                    switch results {
+                    case .success(_):
+                        DispatchQueue.main.async {
+                            self.isLoading = false
+                            self.successAddRoom = true
+                        }
+                    case .failure(let error):
+                        DispatchQueue.main.async {
+                            print("Error: \(error)")
+                            self.isLoading = false
+                        }
+                    }
+                })
+            }
+        case .editRoom:
+            DispatchQueue.main.async {
+                self.isLoading = true
+            }
+            
+            if let id = room?.id {
+                await repository.updateRoom(id: id, name: name, imageData: selectedPhotoData, completion: { results in
+                    switch results {
+                    case .success(_):
+                        DispatchQueue.main.async {
+                            self.isLoading = false
+                            self.successAddRoom = true
+                        }
+                    case .failure(let error):
+                        DispatchQueue.main.async {
+                            print("Error: \(error)")
+                            self.isLoading = false
+                        }
+                    }
+                })
+            }
+        }
     }
 }

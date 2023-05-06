@@ -51,8 +51,37 @@ struct RoomContainerView: UIViewRepresentable {
                 }
             }
             
+            if let toPlaces = self.viewModel.initRoomPlaceFurnitures {
+                print("To places \(toPlaces)")
+                for chosenModelToPlace in toPlaces {
+                    do {
+                        let modelEntity = try getModel(fileName: chosenModelToPlace.furniture?.name ?? "")
+                        
+                        let clonedModel = modelEntity.clone(recursive: true)
+                        clonedModel.name = "\(chosenModelToPlace.furniture?.name ?? "")_\(viewModel.furnitureAdded.count)"
+                        clonedModel.generateCollisionShapes(recursive: true)
+                        clonedModel.scale *= 0.1
+                        
+                        let anchor = AnchorEntity(plane: .any)
+//                        let anchor = AnchorEntity()
+                        
+                        arView.installGestures(
+                            [.translation, .scale, .rotation],
+                            for: clonedModel
+                        )
+                        anchor.addChild(clonedModel)
+                        arView.scene.addAnchor(anchor)
+                        
+                        viewModel.chooseFurniture(furniture: clonedModel)
+                    } catch {
+                        print("Error is \(error)")
+                    }
+                }
+            }
+            
             viewModel.chosenModelToPlace = nil
             viewModel.modelToDelete = nil
+            viewModel.initRoomPlaceFurnitures = nil
         }
         
         return arView

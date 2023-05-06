@@ -11,5 +11,6 @@ import RealityKit
 struct FurnitureChosenModel: Identifiable {
     var id: UUID = UUID()
     let model: ModelEntity
+    let furniture: FurnitureModel?
     let defaultMaterials: [Material]
 }

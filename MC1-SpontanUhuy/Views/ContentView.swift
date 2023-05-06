@@ -21,7 +21,7 @@ struct ContentView: View {
                             .navigationBarBackButtonHidden()
                     }
                 )
-        }
+        }.preferredColorScheme(.light)
     }
 }
 

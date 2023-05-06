@@ -17,12 +17,16 @@ struct RoomList: View {
                 RoomFormView(
                     roomFormViewModel: RoomFormViewModel(
                         viewState: .editRoom,
-                        roomNameField: room.name
+                        room: room,
+                        name: room.name,
+                        imageURL: room.imageURL
                     )
                 ).navigationBarBackButtonHidden()
             } label: {
                 RoomListCard(
-                    name: "Test", imageURL: "Test"
+                    name: room.name,
+                    imageURL: room.imageURL,
+                    room: room
                 )
             }
         }
@@ -32,28 +36,32 @@ struct RoomList: View {
 struct RoomListCard: View {
     let name: String
     let imageURL: String
+    let room: RoomModel?
     
     var body: some View {
         HStack {
-            Group {
-                // TODO: Show based on image availability
-//                if index % 2 == 0 {
-//                    Image("DummyRoomPic")
-//                        .cornerRadius(15)
-//                } else {
-//                    ZStack {
-//                        Color(.lightGray)
-//                        Text("No Image")
-//                            .foregroundColor(.gray)
-//                    }
-//                }
-            }
-            .frame(width: 150, height: 100)
-            .cornerRadius(15)
+            // TODO: Show based on image availability
+            AsyncImage(
+                url: URL(string: imageURL)!,
+                content: { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 120, height: 80)
+                        .cornerRadius(8)
+                },
+                placeholder: {
+                    ZStack {
+                        Color(.lightGray)
+                        Text("No Image")
+                            .foregroundColor(.gray)
+                    }.frame(width: 120, height: 80)
+                }
+            )
             
             
             VStack(alignment: .leading, spacing: 10) {
-                Text("Bedroom 1")
+                Text(name)
                     .fontWeight(.bold)
                 
                 Text("Last edited: 04/05/2023, 15:30")
@@ -65,8 +73,9 @@ struct RoomListCard: View {
             Spacer()
             
             VStack {
-                Button {
-                    print("Open AR View")
+                NavigationLink {
+                    RoomView(viewModel: RoomViewModel(room: room))
+                        .navigationBarBackButtonHidden()
                 } label: {
                     Image(systemName: "camera.viewfinder")
                         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
@@ -91,6 +100,6 @@ struct RoomListCard: View {
 
 struct RoomListCard_Previews: PreviewProvider {
     static var previews: some View {
-        RoomListCard(name: "Test", imageURL: "test")
+        RoomListCard(name: "Test", imageURL: "test", room: nil)
     }
 }

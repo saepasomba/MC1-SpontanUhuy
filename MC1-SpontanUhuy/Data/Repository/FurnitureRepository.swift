@@ -7,6 +7,7 @@
 
 import Foundation
 import CloudKit
+import Cloudinary
 
 class FurnitureRepository {
     
@@ -74,5 +75,121 @@ class FurnitureRepository {
         }
         
         return rooms
+    }
+    
+    func saveFurnitureHistory(furniture: FurnitureChosenModel) async throws -> FurnitureHistoryModel? {
+        if let furnitureModel = furniture.furniture {
+            let newRecord = CKRecord(recordType: FurnitureHistoryModel.recordType)
+            newRecord.setValuesForKeys([
+                "position_x": await Double(furniture.model.position.x),
+                "position_y": await Double(furniture.model.position.y),
+                "position_z": await Double(furniture.model.position.z),
+                "furniture": CKRecord.Reference(recordID: furnitureModel.id, action: .deleteSelf)
+            ])
+            let record = try await privateDB.save(newRecord)
+            return await FurnitureHistoryModel(record: record)
+        } else {
+            return nil
+        }
+    }
+    
+    func updateRoom(
+        id: CKRecord.ID,
+        name: String,
+        imageData: Data?,
+        furnitures: [FurnitureChosenModel] = [],
+        completion: @escaping (Result<Bool, Error>
+    ) -> Void) async {
+        
+        do {
+            let record = try await privateDB.record(for: id)
+            
+            if let data = imageData {
+                let config = CLDConfiguration(cloudName: "dggxoopi8", apiKey: "898787985328797")
+                let cloudinary = CLDCloudinary(configuration: config)
+                
+                let request = cloudinary.createUploader().upload(data: data, uploadPreset: "ebd8r09c") { progress in
+                    print("UPLOAD IMAGE... \(progress.completedUnitCount) : \(progress.totalUnitCount)")
+                } completionHandler: { result, error in
+                    if let error = error {
+                        completion(Result.failure(error))
+                    } else {
+                        let url = result?.url ?? ""
+                        
+                        record.setValuesForKeys([
+                            "name": name,
+                            "description": name,
+                            "imageURL": url.replacing("http", with: "https")
+                        ])
+                        
+                        self.privateDB.save(record) { _, error in
+                            if let error = error {
+                                completion(Result.failure(error))
+                            } else {
+                                completion(Result.success(true))
+                            }
+                        }
+                    }
+                }
+                
+                request.resume()
+            } else {
+                do {
+                    if !furnitures.isEmpty {
+                        var histories: [FurnitureHistoryModel] = []
+                        for furniture in furnitures {
+                            if let furnitureHistory = try? await saveFurnitureHistory(furniture: furniture) {
+                                histories.append(furnitureHistory)
+                            }
+                        }
+                        record.setValue(histories.map { CKRecord.Reference(recordID: $0.id, action: .deleteSelf) }, forKey: "furnitures")
+                    }
+                    
+                    record.setValuesForKeys([
+                        "name": name,
+                        "description": name
+                    ])
+                    
+                    let results = try await self.privateDB.modifyRecords(saving: [record], deleting: [])
+                    completion(Result.success(true))
+                } catch {
+                    completion(Result.failure(error))
+                }
+            }
+        } catch {
+            completion(Result.failure(error))
+        }
+    }
+    
+    func insertRoom(name: String, imageData: Data, completion: @escaping (Result<Bool, Error>) -> Void) async {
+        let record = CKRecord(recordType: RoomModel.recordType)
+        let config = CLDConfiguration(cloudName: "dggxoopi8", apiKey: "898787985328797")
+        let cloudinary = CLDCloudinary(configuration: config)
+        
+        let request = cloudinary.createUploader().upload(data: imageData, uploadPreset: "ebd8r09c") { progress in
+            print("UPLOAD IMAGE... \(progress.completedUnitCount) : \(progress.totalUnitCount)")
+        } completionHandler: { result, error in
+            if let error = error {
+                completion(Result.failure(error))
+            } else {
+                let url = result?.url ?? ""
+                
+                record.setValuesForKeys([
+                    "name": name,
+                    "description": name,
+                    "imageURL": url.replacing("http", with: "https")
+                ])
+                
+                self.privateDB.save(record) { record, error in
+                    if let error = error {
+                        completion(Result.failure(error))
+                    } else {
+                        completion(Result.success(true))
+                    }
+                }
+            }
+        }
+        
+        request.resume()
     }
 }

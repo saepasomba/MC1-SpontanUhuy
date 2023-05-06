@@ -21,7 +21,7 @@ struct HomePageView: View {
                     .environmentObject(homePageViewModel)
                 
                 // MARK: Room Ideas Section
-                if homePageViewModel.searchField.isEmpty {
+                if homePageViewModel.searchField.isEmpty && homePageViewModel.message.isEmpty {
                     VStack {
                         Text("Room Ideas")
                             .padding(.horizontal)
@@ -31,8 +31,7 @@ struct HomePageView: View {
                             .foregroundColor(Color(hex: Constants.Color.primaryBlue))
                         
                         if homePageViewModel.isLoading {
-                            ProgressView()
-                                .progressViewStyle(.circular)
+                            ProgressView().progressViewStyle(.circular)
                         } else {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 LazyHStack {
@@ -42,18 +41,20 @@ struct HomePageView: View {
                                             imageURL: recommendation.imageURL,
                                             onCardClicked: {
                                                 print("Card Clicked")
-                                            }
+                                            },
+                                            recommendation: recommendation
                                         )
                                     }
-                                }.padding(.horizontal)
+                                }
+                                .padding(.horizontal)
                             }
                         }
                     }
                     .padding(.top)
                 }
                 
-                //MARK: My Rooms
-                VStack {
+                // MARK: My Rooms
+                VStack(alignment: .leading) {
                     Text("My Rooms")
                         .padding(.horizontal)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -62,9 +63,18 @@ struct HomePageView: View {
                         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
                     VStack {
                         if homePageViewModel.isLoading {
-                            ProgressView().progressViewStyle(.circular)
+                            HStack {
+                                Spacer()
+                                ProgressView().progressViewStyle(.circular)
+                                Spacer()
+                            }
                         } else {
-                            RoomList(rooms: $homePageViewModel.rooms)
+                            if homePageViewModel.message.isEmpty {
+                                RoomList(rooms: $homePageViewModel.rooms)
+                            } else {
+                                Text("Error: \(homePageViewModel.message)")
+                                    .padding(.top, 2)
+                            }
                         }
                     }
                     .padding(.horizontal)
@@ -73,11 +83,17 @@ struct HomePageView: View {
                 .padding(.top)
             }
             
-            //MARK: Add new room button
+            // MARK: Add new room button
             VStack {
                 Spacer()
                 NavigationLink {
-                    RoomView().navigationBarBackButtonHidden()
+                    // RoomView().navigationBarBackButtonHidden()
+                    RoomFormView(
+                        roomFormViewModel: RoomFormViewModel(
+                            viewState: .newRoom,
+                            room: nil
+                        )
+                    ).navigationBarBackButtonHidden()
                 } label: {
                     Text("Add New Room")
                         .fontWeight(.bold)
@@ -129,7 +145,6 @@ struct HomeTopBar: View {
                             .fill(Color(hex: Constants.Color.primaryBlue))
                     }
             }
-            
         }
         .padding(.horizontal)
         .foregroundColor(Color(hex: Constants.Color.primaryBlue))

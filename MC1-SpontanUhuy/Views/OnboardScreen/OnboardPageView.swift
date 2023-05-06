@@ -33,17 +33,19 @@ struct OnboardPageView: View {
                 }
             }
             
+            Color(hex: 0xFF000000, alpha: 0.1)
+                .ignoresSafeArea()
+            
             VStack (alignment: .leading) {
                 Spacer()
-                Group {
+                VStack(alignment: .leading) {
                     Text("Design Home Space on Your Own")
                         .font(.system(size: 34))
                         .padding(.bottom, 8)
                         .fontWeight(.medium)
-                    Text("Augmented Reality helps you visualize your imaginary home space.")
-                        .font(.system(size: 17))
-                    Text("More than just a room, more than usual.")
-                        .font(.system(size: 17))
+                    
+                    Text("Augmented Reality helps you visualize your imaginary home space.\nMore than just a room, more than usual.")
+                        .font(.body)
                         .padding(.bottom, 32)
                 }
                 .foregroundColor(

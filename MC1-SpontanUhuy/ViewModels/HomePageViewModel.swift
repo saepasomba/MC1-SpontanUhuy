@@ -34,6 +34,7 @@ class HomePageViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.message = error.localizedDescription
                 self.isLoading = false
+                print("Error is \(error)")
             }
         }
     }

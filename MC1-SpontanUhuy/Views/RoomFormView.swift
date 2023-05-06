@@ -18,15 +18,14 @@ struct RoomFormView: View {
                 Text("\(roomFormViewModel.viewState == .newRoom ? "New" : "Edit") Room")
                     .fontWeight(.bold)
                 HStack {
-                    Button {
-                        dismiss()
-                    } label: {
+                    Button { dismiss() } label: {
                         Image(systemName: "chevron.left")
                     }
+                    
                     Spacer()
                     
                     if roomFormViewModel.viewState == .editRoom {
-                        ShareLink(item: URL(string: "https://google.com/")!) {
+                        ShareLink(item: URL(string: "https://temanruang.com/rooms/198903810101")!) {
                             Image(systemName: "square.and.arrow.up")
                                 .resizable()
                                 .scaledToFit()
@@ -35,78 +34,127 @@ struct RoomFormView: View {
                     }
                 }
             }
-            .padding(.bottom)
+            .padding(.vertical)
             .font(.title3)
             
+            VStack {
+                Text("Input Your Room Name")
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                TextField("Your room name", text: $roomFormViewModel.name)
+                    .frame(height: 30)
+                    .padding()
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                    }
+            }
+            .padding(.top)
             
-            Text("Input Your Room Name")
-                .frame(maxWidth: .infinity, alignment: .leading)
-            TextField("Your room name", text: $roomFormViewModel.roomNameField)
-                .padding()
-                .overlay {
-                    RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                }
             Text("Add Your Room Image")
+                .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            PhotosPicker(selection: $roomFormViewModel.selectedItem, matching: .any(of: [.images, .not(.livePhotos)])) {
-                //                if let selectedPhotoData = roomFormViewModel.selectedPhotoData {
-                //                    if let image = UIImage(data: selectedPhotoData) {
-                //                        VStack {
-                //                            ZStack {
-                //                                Image(uiImage: image)
-                //                                    .resizable()
-                //                                    .scaledToFit()
-                //                                    .cornerRadius(15)
-                //                                    .overlay {
-                //                                        ZStack {
-                //                                            RoundedRectangle(cornerRadius: 15)
-                //                                                .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                //                                            RoundedRectangle(cornerRadius: 15)
-                //                                                .fill(Color(.black).opacity(0.4))
-                //                                        }
-                //                                    }
-                //
-                //                                Text("Edit Image")
-                //                                    .foregroundColor(.white)
-                //                            }
-                //
-                //                            Button {
-                //                                withAnimation(Animation.easeIn(duration: 0.2)) {
-                //                                    roomFormViewModel.selectedPhotoData = nil
-                //                                }
-                //                            } label: {
-                //                                Text("Remove Image")
-                //                                    .padding(.top)
-                //                                    .foregroundColor(.red)
-                //                            }
-                //
-                //                        }
-                //                    }
-                if let isUploadingStatus = roomFormViewModel.isUploading {
-                    if isUploadingStatus {
-                        ProgressView()
+                .padding(.top)
+            
+            PhotosPicker(
+                selection: $roomFormViewModel.selectedItem,
+                matching: .any(of: [.images, .not(.livePhotos)])
+            ) {
+                if let imageData = roomFormViewModel.selectedPhotoData {
+                    VStack {
+                        ZStack {
+                            Image(uiImage: UIImage(data: imageData)!)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(maxWidth: .infinity, maxHeight: 200)
+                                .cornerRadius(15)
+                                .overlay {
+                                    ZStack {
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(
+                                                Color(hex: Constants.Color.primaryBlue),
+                                                lineWidth: 1
+                                            )
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .fill(Color(.black).opacity(0.4))
+                                    }
+                                }
+                            
+                            Text("Edit Image").foregroundColor(.white)
+                        }
                         
-                    } else {
-                        AsyncImage(
-                            url: roomFormViewModel.imageUrl,
-                            content: { image in
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .cornerRadius(15)
-                            },
-                            placeholder: {
-                                
+                        Button {
+                            withAnimation(Animation.easeIn(duration: 0.2)) {
+                                roomFormViewModel.selectedPhotoData = nil
                             }
-                        )
+                        } label: {
+                            Text("Remove Image")
+                                .padding(.top)
+                                .foregroundColor(.red)
+                        }
+                    }
+                } else if let imageURL = roomFormViewModel.imageURL {
+                    VStack {
+                        ZStack {
+                            AsyncImage(
+                                url: URL(string: imageURL)!,
+                                content: { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(maxWidth: .infinity, maxHeight: 200)
+                                        .cornerRadius(15)
+                                        .overlay {
+                                            ZStack {
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .stroke(
+                                                        Color(hex: Constants.Color.primaryBlue),
+                                                        lineWidth: 1
+                                                    )
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .fill(Color(.black).opacity(0.4))
+                                            }
+                                        }
+                                },
+                                placeholder: {
+                                    ProgressView()
+                                        .progressViewStyle(.circular)
+                                        .frame(maxWidth: .infinity, maxHeight: 200)
+                                        .cornerRadius(15)
+                                        .overlay {
+                                            ZStack {
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .stroke(
+                                                        Color(hex: Constants.Color.primaryBlue),
+                                                        lineWidth: 1
+                                                    )
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .fill(Color(.black).opacity(0.4))
+                                            }
+                                        }
+                                }
+                            )
+                            
+                            Text("Edit Image").foregroundColor(.white)
+                        }
+                        
+                        Button {
+                            withAnimation(Animation.easeIn(duration: 0.2)) {
+                                roomFormViewModel.selectedPhotoData = nil
+                            }
+                        } label: {
+                            Text("Remove Image")
+                                .padding(.top)
+                                .foregroundColor(.red)
+                        }
                     }
                 } else {
                     VStack {
                         Text("+")
                         Text("Add Image")
                     }
-                    .frame(maxWidth: .infinity, maxHeight: 125)
+                    .frame(maxWidth: .infinity, maxHeight: 200)
                     .overlay {
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
@@ -117,7 +165,6 @@ struct RoomFormView: View {
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
                         roomFormViewModel.selectedPhotoData = data
-                        roomFormViewModel.uploadImage(data: data)
                     }
                 }
             }
@@ -125,22 +172,25 @@ struct RoomFormView: View {
             Spacer()
             
             VStack {
-                Spacer()
-                
-                NavigationLink {
-                    Text("Hello")
+                Button {
+                    Task {
+                        await roomFormViewModel.save()
+                    }
                 } label: {
-                    Text("Save New Room")
-                        .fontWeight(.bold)
-                        .padding()
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .background {
-                            Color(hex: Constants.Color.primaryBlue)
-                            
-                        }
-                        .cornerRadius(8)
-                }
+                    if roomFormViewModel.isLoading {
+                        ProgressView().progressViewStyle(.circular)
+                    } else {
+                        Text(roomFormViewModel.viewState == .editRoom ? "Save Room" : "Save New Room")
+                            .fontWeight(.bold)
+                            .padding()
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .background {
+                                Color(hex: Constants.Color.primaryBlue)
+                            }
+                            .cornerRadius(8)
+                    }
+                }.disabled(roomFormViewModel.isLoading)
                 
                 if roomFormViewModel.viewState == .editRoom {
                     Button {
@@ -156,11 +206,16 @@ struct RoomFormView: View {
         }
         .padding(.horizontal)
         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
+        .onChange(of: roomFormViewModel.successAddRoom) { newValue in
+            if newValue {
+                dismiss()
+            }
+        }
     }
 }
 
 struct RoomFormView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .newRoom))
+        RoomFormView(roomFormViewModel: RoomFormViewModel(viewState: .newRoom, room: nil))
     }
 }

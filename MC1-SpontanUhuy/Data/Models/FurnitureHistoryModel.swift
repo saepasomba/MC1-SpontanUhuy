@@ -23,7 +23,7 @@ class FurnitureHistoryModel: Identifiable {
               let reference = record["furniture"] as? CKRecord.Reference
         else { return nil }
         
-        let db = CKContainer(identifier: "iCloud.id.spontan-uhuy.TemanRuang.TestContainer").privateCloudDatabase
+        let db = CKContainer(identifier: "iCloud.id.spontan-uhuy.TemanRuang.TestContainer").publicCloudDatabase
         if let record = try? await db.record(for: reference.recordID) {
             if let furniture = FurnitureModel(record: record) {
                 self.furniture = furniture

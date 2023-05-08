@@ -67,6 +67,8 @@ class FurnitureRepository {
         let results = try await privateDB.records(matching: query)
         let records = results.matchResults.compactMap { try? $0.1.get() }
         
+        print("Results room: \(records)")
+        
         var rooms = [RoomModel]()
         for record in records {
             if let room = await RoomModel(record: record) {
@@ -99,7 +101,7 @@ class FurnitureRepository {
         imageData: Data?,
         furnitures: [FurnitureChosenModel] = [],
         completion: @escaping (Result<Bool, Error>
-    ) -> Void) async {
+        ) -> Void) async {
         
         do {
             let record = try await privateDB.record(for: id)
@@ -194,15 +196,15 @@ class FurnitureRepository {
     }
     
     func deleteRoom(id: CKRecord.ID?) async throws -> Bool {
-            do {
-                if let id = id {
-                    let _ = try await privateDB.deleteRecord(withID: id)
-                    return true
-                } else {
-                    return false
-                }
-            } catch {
+        do {
+            if let id = id {
+                let _ = try await privateDB.deleteRecord(withID: id)
+                return true
+            } else {
                 return false
             }
+        } catch {
+            return false
         }
+    }
 }

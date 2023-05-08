@@ -26,8 +26,8 @@ struct RoomContainerView: UIViewRepresentable {
                     clonedModel.generateCollisionShapes(recursive: true)
                     clonedModel.scale *= 0.1
                     
-//                    let anchor = AnchorEntity(plane: .any)
-                    let anchor = AnchorEntity()
+                    let anchor = AnchorEntity(plane: .any)
+//                    let anchor = AnchorEntity()
                     
                     arView.installGestures(
                         [.translation, .scale, .rotation],
@@ -62,8 +62,8 @@ struct RoomContainerView: UIViewRepresentable {
                         clonedModel.generateCollisionShapes(recursive: true)
                         clonedModel.scale *= 0.1
                         
-//                        let anchor = AnchorEntity(plane: .any)
-                        let anchor = AnchorEntity()
+                        let anchor = AnchorEntity(plane: .any)
+//                        let anchor = AnchorEntity()
                         
                         arView.installGestures(
                             [.translation, .scale, .rotation],

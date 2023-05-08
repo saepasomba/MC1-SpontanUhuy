@@ -11,11 +11,11 @@ struct RoomCard: View {
     
     let roomName: String
     let imageURL: String
-    let onCardClicked: () -> Void
     let recommendation: RecommendationModel?
     
     var body: some View {
-        //MARK: Room Idea Card
+        
+        // MARK: Room Idea Card
         NavigationLink {
             IdeasView(recommendation: recommendation)
                 .navigationBarBackButtonHidden()
@@ -25,7 +25,9 @@ struct RoomCard: View {
                     url: URL(string: imageURL)!,
                     content: { image in
                         image
-                            .frame(maxWidth: 170)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 170, height: 100)
                             .overlay {
                                 Color(hex: 0xFF424242, alpha: 0.3)
                             }
@@ -51,9 +53,6 @@ struct RoomCard_Previews: PreviewProvider {
         RoomCard(
             roomName: "Living Room",
             imageURL: "https://picsum.photos/id/237/200/300",
-            onCardClicked: {
-                
-            },
             recommendation: nil
         )
     }

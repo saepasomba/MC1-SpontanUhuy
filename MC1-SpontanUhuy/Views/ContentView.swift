@@ -12,7 +12,6 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-//            RoomView()
             SplashScreenView(isFinished: $isFinished)
                 .navigationDestination(
                     isPresented: $isFinished,
@@ -22,6 +21,9 @@ struct ContentView: View {
                     }
                 )
         }.preferredColorScheme(.light)
+            .onOpenURL { incomingURL in
+                print("App was opened by: \(incomingURL)")
+            }
     }
 }
 

@@ -35,7 +35,9 @@ struct FurnitureList: View {
                 LazyHStack(alignment: .center) {
                     ForEach(furnitures.indices, id: \.self) { index in
                         VStack(alignment: .center) {
-                            FurnitureCard(imageURL: furnitures[index].imageURL)
+                            FurnitureCard(
+                                imageURL: furnitures[index].imageURL
+                            )
                         }
                         .padding(12)
                         .background(
@@ -55,7 +57,8 @@ struct FurnitureList: View {
             }
             .scrollIndicators(.hidden)
             
-            Image(systemName: "chevron.right").foregroundColor(.white)
+            Image(systemName: "chevron.right")
+                .foregroundColor(.white)
         }
         .frame(height: 90)
         .padding()

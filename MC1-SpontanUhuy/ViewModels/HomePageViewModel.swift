@@ -13,29 +13,64 @@ class HomePageViewModel: ObservableObject {
     @Published var recommendations: [RecommendationModel] = []
     @Published var rooms: [RoomModel] = []
     @Published var message = ""
-    @Published var isLoading = false
+    @Published var isLoadingRecommendation = false
+    @Published var isLoadingRooms = false
+    @Published var searchResults: [RoomModel] = []
     
     private let repository = FurnitureRepository()
     
-    func initData() async {
+    func initDataRecommendations() async {
         DispatchQueue.main.async {
-            self.isLoading = true
+            self.isLoadingRecommendation = true
         }
         
         do {
             let results = try await repository.getRecommendations()
-            let rooms = try await repository.getRooms()
             DispatchQueue.main.async {
-                self.isLoading = false
+                self.isLoadingRecommendation = false
                 self.recommendations = results
-                self.rooms = rooms
             }
         } catch {
             DispatchQueue.main.async {
                 self.message = error.localizedDescription
-                self.isLoading = false
-                print("Error is \(error)")
+                self.isLoadingRecommendation = false
             }
+        }
+    }
+    
+    func initDataRooms() async {
+        DispatchQueue.main.async {
+            self.isLoadingRooms = true
+        }
+        
+        do {
+            let results = try await repository.getRooms()
+            DispatchQueue.main.async {
+                print("New rooms: \(results.map { $0.name })")
+                self.isLoadingRooms = false
+                self.rooms = results
+                self.searchResults = results
+            }
+        } catch {
+            DispatchQueue.main.async {
+                self.message = error.localizedDescription
+                self.isLoadingRooms = false
+            }
+        }
+    }
+    
+    func searchData() {
+        if searchField.isEmpty {
+            DispatchQueue.main.async {
+                self.searchResults = self.rooms
+            }
+            return
+        }
+        
+        DispatchQueue.main.async {
+            self.searchResults = self.rooms.filter({ room in
+                return room.name.lowercased().contains(self.searchField.lowercased())
+            })
         }
     }
 }

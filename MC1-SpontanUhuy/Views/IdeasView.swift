@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct IdeasView: View {
-    
     let recommendation: RecommendationModel?
     @Environment(\.dismiss) var dismiss
     
@@ -49,38 +48,42 @@ struct IdeasView: View {
                                         .frame(height: 300)
                                 }
                             )
-                            
-                            VStack {
-                                HStack {
-                                    Spacer()
-                                    Button {
-                                        print("Like idea")
-                                    } label: {
-                                        Image(systemName: "heart")
-                                            .padding(7)
-                                    }
-                                    .background {
-                                        Circle()
-                                            .fill(.white)
-                                            .overlay {
-                                                Circle()
-                                                    .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                                            }
-                                    }
-                                }
-                                Spacer()
-                            }
-                            .padding()
+//                            VStack {
+//                                HStack {
+//                                    Spacer()
+//                                    Button {
+//                                        print("Like idea")
+//                                    } label: {
+//                                        Image(systemName: "heart")
+//                                            .padding(7)
+//                                    }
+//                                    .background {
+//                                        Circle()
+//                                            .fill(.white)
+//                                            .overlay {
+//                                                Circle()
+//                                                    .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+//                                            }
+//                                    }
+//                                }
+//                                Spacer()
+//                            }
+//                            .padding()
                         }
                     }
                     .padding(.horizontal)
+                    .padding(.top)
                     
                     VStack {
                         HStack {
                             Text("Product in this photo")
                             Spacer()
-                            Button {
-                                print("Open AR View")
+                            NavigationLink {
+                                RoomView(
+                                    viewModel: RoomViewModel(room: nil),
+                                    furnitures: recommendation?.furnitures ?? []
+                                )
+                                .navigationBarBackButtonHidden()
                             } label: {
                                 Image(systemName: "camera.viewfinder")
                                     .foregroundColor(Color(hex: Constants.Color.primaryBlue))
@@ -94,12 +97,13 @@ struct IdeasView: View {
                         .padding(.horizontal)
                         
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(recommendation?.furnitures ?? [], id: \.id) { furniture in
+                            LazyHStack {
+                                ForEach(recommendation?.furnitures ?? []) { furniture in
                                     AsyncImage(
                                         url: URL(string: furniture.imageURL)!,
                                         content: { image in
                                             image
+                                                .resizable()
                                                 .frame(width: 90, height: 60)
                                                 .background {
                                                     Color(hex: Constants.Color.primaryCyan)
@@ -107,7 +111,6 @@ struct IdeasView: View {
                                                         .overlay {
                                                             RoundedRectangle(cornerRadius: 8)
                                                                 .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
-                                                            
                                                         }
                                                 }
                                                 .cornerRadius(8)
@@ -123,6 +126,7 @@ struct IdeasView: View {
                             .padding(.horizontal)
                         }
                     }
+                    .padding(.top)
                 }
             }
             .padding(.bottom, 35)

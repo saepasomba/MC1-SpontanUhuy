@@ -47,10 +47,13 @@ class RoomViewModel: ObservableObject {
             let categories = try await repository.getCategories()
             DispatchQueue.main.async {
                 self.categories = categories
-                self.isLoading = true
+                self.isLoading = false
             }
         } catch {
-            print("Error is \(error)")
+            DispatchQueue.main.async {
+                print("Error is \(error)")
+                self.isLoading = false
+            }
         }
     }
     
@@ -116,7 +119,7 @@ class RoomViewModel: ObservableObject {
             }
         } else {
             DispatchQueue.main.async {
-                self.isLoading = true
+                self.isLoading = false
                 self.successUpdate = false
             }
         }

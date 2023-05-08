@@ -46,8 +46,9 @@ struct OnboardPageView: View {
                     
                     Text("Augmented Reality helps you visualize your imaginary home space.\nMore than just a room, more than usual.")
                         .font(.body)
-                        .padding(.bottom, 32)
+                        .padding(.bottom, UIDevice.current.userInterfaceIdiom == .phone ? 24 : 140)
                 }
+                
                 .foregroundColor(
                     Color(hex: Constants.Color.primaryBlue)
                 )

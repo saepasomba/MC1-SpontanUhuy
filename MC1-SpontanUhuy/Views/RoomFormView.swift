@@ -10,6 +10,7 @@ import PhotosUI
 
 struct RoomFormView: View {
     @StateObject var roomFormViewModel: RoomFormViewModel
+    @EnvironmentObject var homePageViewModel: HomePageViewModel
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -44,10 +45,14 @@ struct RoomFormView: View {
                 
                 TextField("Your room name", text: $roomFormViewModel.name)
                     .frame(height: 30)
+                    .frame(maxWidth: .infinity)
                     .padding()
                     .overlay {
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                            .stroke(
+                                Color(hex: Constants.Color.primaryBlue),
+                                lineWidth: 1
+                            )
                     }
             }
             .padding(.top)
@@ -169,6 +174,39 @@ struct RoomFormView: View {
                 }
             }
             
+            if !(roomFormViewModel.room?.furnitures ?? []).isEmpty {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack {
+                        ForEach(roomFormViewModel.room?.furnitures ?? []) { furniture in
+                            AsyncImage(
+                                url: URL(string: furniture.furniture?.imageURL ?? "")!,
+                                content: { image in
+                                    image
+                                        .resizable()
+                                        .frame(width: 90, height: 60)
+                                        .background {
+                                            Color(hex: Constants.Color.primaryCyan)
+                                                .opacity(0.3)
+                                                .overlay {
+                                                    RoundedRectangle(cornerRadius: 8)
+                                                        .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
+                                                }
+                                        }
+                                        .cornerRadius(8)
+                                },
+                                placeholder: {
+                                    ProgressView()
+                                        .progressViewStyle(.circular)
+                                        .frame(width: 90, height: 60)
+                                }
+                            )
+                            .padding(.horizontal)
+                        }
+                    }
+                }
+                .frame(maxHeight: 100)
+            }
+            
             Spacer()
             
             VStack {
@@ -190,7 +228,8 @@ struct RoomFormView: View {
                             }
                             .cornerRadius(8)
                     }
-                }.disabled(roomFormViewModel.isLoading)
+                }
+                .disabled(roomFormViewModel.isLoading)
                 
                 if roomFormViewModel.viewState == .editRoom {
                     Button {
@@ -205,12 +244,15 @@ struct RoomFormView: View {
                 }
                 
             }
+            .padding(.bottom)
         }
         .padding(.horizontal)
         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
         .onChange(of: roomFormViewModel.successAddRoom) { newValue in
             if newValue {
-                dismiss()
+                Task {
+                    dismiss()
+                }
             }
         }
     }

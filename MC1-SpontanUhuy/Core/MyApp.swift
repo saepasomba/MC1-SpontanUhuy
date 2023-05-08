@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MyApp: App {
+    @StateObject var homePageViewModel = HomePageViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(homePageViewModel)
         }
     }
 }

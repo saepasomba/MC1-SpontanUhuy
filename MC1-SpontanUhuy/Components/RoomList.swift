@@ -55,7 +55,9 @@ struct RoomListCard: View {
                         Color(.lightGray)
                         Text("No Image")
                             .foregroundColor(.gray)
-                    }.frame(width: 120, height: 80)
+                    }
+                    .frame(width: 120, height: 80)
+                    .cornerRadius(8)
                 }
             )
             
@@ -74,8 +76,10 @@ struct RoomListCard: View {
             
             VStack {
                 NavigationLink {
-                    RoomView(viewModel: RoomViewModel(room: room))
-                        .navigationBarBackButtonHidden()
+                    RoomView(
+                        viewModel: RoomViewModel(room: room),
+                        furnitures: room?.furnitures.map { $0.furniture! }
+                    ).navigationBarBackButtonHidden()
                 } label: {
                     Image(systemName: "camera.viewfinder")
                         .foregroundColor(Color(hex: Constants.Color.primaryBlue))
@@ -85,6 +89,7 @@ struct RoomListCard: View {
                                 .stroke(Color(hex: Constants.Color.primaryBlue), lineWidth: 1)
                         }
                 }
+                
                 Spacer()
             }
         }

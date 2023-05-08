@@ -52,13 +52,12 @@ class RoomFormViewModel: ObservableObject {
                 await repository.insertRoom(name: name, imageData: data, completion: { results in
                     switch results {
                     case .success(_):
-                        DispatchQueue.main.async {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                             self.isLoading = false
                             self.successAddRoom = true
                         }
-                    case .failure(let error):
+                    case .failure(_):
                         DispatchQueue.main.async {
-                            print("Error: \(error)")
                             self.isLoading = false
                         }
                     }
@@ -96,18 +95,27 @@ class RoomFormViewModel: ObservableObject {
         if let id = room?.id {
             do {
                 let isSuccess = try await repository.deleteRoom(id: id)
-                self.isLoading = false
+                
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
                 
                 switch isSuccess {
                 case true:
-                    self.successAddRoom = true
-                    
+                    DispatchQueue.main.async {
+                        self.successAddRoom = true
+                        self.isLoading = false
+                    }
                 case false:
-                    self.successAddRoom = false
+                    DispatchQueue.main.async {
+                        self.successAddRoom = false
+                        self.isLoading = false
+                    }
                 }
             } catch {
-                self.isLoading = false
-                print(error)
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
             }
         }
     }

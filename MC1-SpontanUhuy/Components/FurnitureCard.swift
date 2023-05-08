@@ -24,7 +24,7 @@ struct FurnitureCard: View {
                 ProgressView()
                     .progressViewStyle(.circular)
                     .frame(width: 60, height: 60)
-                
+                    .cornerRadius(8)
             }
         )
     }

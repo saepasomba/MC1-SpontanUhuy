@@ -18,10 +18,7 @@ class RoomModel: Identifiable {
     init?(record: CKRecord) async {
         guard let name = record["name"] as? String,
               let imageURL = record["imageURL"] as? String
-        else {
-            print("Return nil \(record.allKeys())")
-            return nil
-        }
+        else { return nil }
         
         let historyReference = (record["furnitures"] as? [CKRecord.Reference]) ?? []
         

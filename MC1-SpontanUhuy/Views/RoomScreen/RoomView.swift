@@ -9,30 +9,52 @@ import SwiftUI
 import RealityKit
 
 struct RoomView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @StateObject var viewModel: RoomViewModel
+    var furnitures: [FurnitureModel]? = nil
+    
     @State private var selectedFurniture: FurnitureModel? = nil
     
     var body: some View {
         ZStack {
             RoomContainerView().ignoresSafeArea()
-            RoomSidebar(selectedFurniture: $selectedFurniture)
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(.circular)
+            } else {
+                RoomSidebar(
+                    selectedFurniture: $selectedFurniture,
+                    furnitures: furnitures
+                )
+            }
         }
         .environmentObject(viewModel)
+        .onChange(of: viewModel.successUpdate) { newValue in
+            if newValue {
+                dismiss()
+            }
+        }
+        .task {
+            await viewModel.initData()
+        }
     }
 }
 
 struct RoomSidebar: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: RoomViewModel
-    
+    let furnitures: [FurnitureModel]?
+
     @Binding private var selectedFurniture: FurnitureModel?
     
     @State private var sidebarOpened = false
     @State private var dialogOpened = false
     @State private var selectedCategory: CategoryModel? = nil
     
-    init(selectedFurniture: Binding<FurnitureModel?>) {
+    init(selectedFurniture: Binding<FurnitureModel?>, furnitures: [FurnitureModel]? = nil) {
         self._selectedFurniture = selectedFurniture
+        self.furnitures = furnitures
     }
     
     var body: some View {
@@ -42,6 +64,8 @@ struct RoomSidebar: View {
                     viewModel.furnitureAdded.removeAll()
                     viewModel.modelToDelete = nil
                     viewModel.furnitureSelected = nil
+                    viewModel.chosenModelToPlace = nil
+                    viewModel.initRoomPlaceFurnitures = nil
                     dismiss()
                 } label: {
                     Image("Icon Back")
@@ -53,7 +77,20 @@ struct RoomSidebar: View {
                 Spacer()
                 
                 Button {
-                    dialogOpened = true
+                    if viewModel.room == nil {
+                        dismiss()
+                    } else {
+                        if UIDevice.current.userInterfaceIdiom == .phone {
+                            dialogOpened = true
+                        } else {
+                            selectedFurniture = nil
+                            selectedCategory = nil
+                            sidebarOpened = false
+                            Task {
+                                await viewModel.save()
+                            }
+                        }
+                    }
                 } label: {
                     Image("image.checklist")
                         .resizable()
@@ -90,6 +127,30 @@ struct RoomSidebar: View {
                     
                     if sidebarOpened {
                         ScrollView {
+                            if furnitures != nil && (furnitures?.count ?? 0) > 0 {
+                                VStack {
+                                    Image(systemName: "star")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 24, height: 24)
+                                        .foregroundColor(Color(hex: Constants.Color.primaryBlue))
+                                }
+                                .padding(8)
+                                .frame(width: 70)
+                                .background(
+                                    Color(
+                                        hex: selectedCategory == nil ? 0xFF71B4D0 : 0xFFFFFFFF,
+                                        alpha: 0.65
+                                    )
+                                )
+                                .cornerRadius(8)
+                                .onTapGesture {
+                                    selectedCategory = nil
+                                    selectedFurniture = nil
+                                }
+                                .padding(.top, 4)
+                            }
+                            
                             ForEach(viewModel.categories) { category in
                                 VStack {
                                     Image(category.imageURL)
@@ -168,9 +229,9 @@ struct RoomSidebar: View {
                 }
             }.padding()
             
-            if !(selectedCategory?.name ?? "").isEmpty {
+            if !(selectedCategory?.name ?? "").isEmpty || !(furnitures ?? []).isEmpty {
                 FurnitureList(
-                    furnitures: selectedCategory?.furnitures ?? [],
+                    furnitures: selectedCategory != nil ? selectedCategory?.furnitures ?? [] : furnitures!,
                     selectedFurniture: $selectedFurniture,
                     selectedCategory: $selectedCategory,
                     onFurnitureClicked: {
@@ -179,22 +240,17 @@ struct RoomSidebar: View {
                 )
             }
         }
-        .task {
-            await viewModel.initData()
-        }
-        .onChange(of: viewModel.successUpdate) { newValue in
-            if newValue {
-                dismiss()
-            }
-        }
-        .confirmationDialog("Are you sure you want to save your work?", isPresented: $dialogOpened) {
+        .confirmationDialog("Are you sure?", isPresented: $dialogOpened) {
             Button("Yes") {
                 selectedFurniture = nil
                 selectedCategory = nil
+                sidebarOpened = false
                 Task {
                     await viewModel.save()
                 }
             }
+        } message: {
+            Text("Are you sure you want to save your work?")
         }
     }
 }
